@@ -1,0 +1,59 @@
+.fact-off {
+  display: none;
+}
+
+.fact-on {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: scroll;
+  background: linear-gradient(
+    148.74deg,
+    rgba(120, 125, 236, 0.6),
+    rgba(227, 122, 204, 0.6)
+  );
+}
+
+.modal-infos {
+  z-index: 2;
+
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  color: grey;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+}
+
+.header {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 2rem;
+  padding: auto;
+}
+
+.close-btn {
+  margin: 2rem;
+  border: 1px solid var(--color-full-booking);
+  color: var(--color-full-booking);
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  width: fit-content;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: white;
+  background-color: var(--color-full-booking);
+  text-decoration: none;
+  cursor: pointer;
+}
