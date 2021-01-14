@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import urlVideo from "../../../../assets/video/russian-movie.mp4";
-import { Player, ControlBar, PlayToggle } from "video-react";
+import { Player, ControlBar, PlayToggle, playerReducer } from "video-react";
 import "../../../../assets/css/SubTitles.css";
 import "../../../../../node_modules/video-react/dist/video-react.css"; // import css
 
-const SubTitles = () => {
+const SubTitles = ({ setModalTV }) => {
   const [answer, setAnswer] = useState({
     subtitle: "",
   });
@@ -40,7 +40,11 @@ const SubTitles = () => {
   };
 
   const handleSubmit = () => {
-    setDefinitiveAnswer(answer.subtitle);
+    if (timeLeft) {
+      setDefinitiveAnswer(answer.subtitle);
+    } else {
+      setModalTV("off");
+    }
   };
   const [mute, setMute] = useState(true);
 
@@ -74,7 +78,7 @@ const SubTitles = () => {
       />
       <button className="subtitle-button" type="button" onClick={handleSubmit}>
         {" "}
-        Répondre{" "}
+        {timeLeft ? "Répondre" : "Fermer"}{" "}
       </button>
       <div className={timeLeft === 0 ? "show-answer" : "hide-answer"}>
         {definitiveAnswer}

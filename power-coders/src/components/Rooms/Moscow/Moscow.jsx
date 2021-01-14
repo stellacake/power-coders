@@ -10,7 +10,7 @@ import book from "../../../assets/img/book.png";
 // import cocktail from "../../../assets/img/cocktail.png";
 
 import "../../../assets/css/Rooms/Moscow.css";
-
+import SubTitles from "./game/SubTitles";
 import { moscowFacts } from "./culturalFacts";
 import MagazineTest from "./MagazineTest";
 import Newspaper from "./games/newspaper/Newspaper";
@@ -25,6 +25,7 @@ const Moscow = () => {
   const [modalMusicbox, setModalMusicbox] = useState("off");
   const [modalNewspaper, setModalNewspaper] = useState("off");
   const [modalCocktail, setModalCocktail] = useState("off");
+  const [modalTV, setModalTV] = useState("off");
 
   // const [modalPhone, setModalPhone] = useState("off");
   // const [modalTv, setModalTv] = useState("off");
@@ -137,11 +138,14 @@ const Moscow = () => {
           <MagazineTest setModalMagazine={setModalMagazine} />
         </div>
       </div>
+      <div className="moscow-tv">
+        <div className="moscow-tv-area" onClick={() => setModalTV("on")}></div>
+        <div className={`fact-${modalTV}`}>
+          <SubTitles setModalTV={setModalTV} />
+        </div>
+      </div>
       <div className="moscow-phone">
         <div className="moscow-phone-area"></div>
-      </div>
-      <div className="moscow-tv">
-        <div className="moscow-tv-area"></div>
       </div>
       <div className="moscow-dolls">
         <div className="moscow-dolls-area"></div>

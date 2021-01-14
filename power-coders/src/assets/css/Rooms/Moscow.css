@@ -97,6 +97,8 @@
   width: 11%;
   height: 13%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .moscow-dolls {
   position: absolute;
