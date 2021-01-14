@@ -12,7 +12,7 @@ export const whiteRussianArray = [
     value: true,
   },
   {
-    name: "crème fraîche (liquide ou épaisse)",
+    name: "crème fraîche",
     value: true,
   },
   {
@@ -24,7 +24,7 @@ export const whiteRussianArray = [
     value: false,
   },
   {
-    name: "crème entière",
+    name: "gin",
     value: false,
   },
   {

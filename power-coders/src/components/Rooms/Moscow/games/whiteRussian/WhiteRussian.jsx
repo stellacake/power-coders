@@ -50,8 +50,10 @@ function WhiteRussian() {
   return (
     <div className="whiteRussian__wrapper">
       <h2>Le White Russian</h2>
-      <p>Connaissez-vous la recette de ce cocktail ?</p>
-      <div>
+      <p className="whiteRussian__paragraph">
+        Connaissez-vous la recette de ce cocktail ?
+      </p>
+      <div className="whiteRussian__wrapper__glass">
         <div className="whiteRussian__glass">
           <div
             className="whiteRussian__drink"
