@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { Join, Chat } from "./components/LoginPage";
 import Moscow from "./components/Rooms/Moscow/Moscow";
-import Newspaper from "./components/Rooms/Moscow/games/Newspaper";
-import "./App.css";
 
 function App() {
   return (

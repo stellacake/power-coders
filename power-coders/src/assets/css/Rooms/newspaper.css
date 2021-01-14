@@ -1,10 +1,14 @@
 .newspaper__wrapper {
-  background-image: url("../images/newspaper.png");
+  background-image: url("../../images/newspaper.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   margin: auto;
 }
 .newspaper__title {
@@ -27,7 +31,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 30px;
+  max-width: 250px;
 }
 .newspaper__word {
   display: flex;
