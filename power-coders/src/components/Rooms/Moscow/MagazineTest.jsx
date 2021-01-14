@@ -3,29 +3,34 @@ import "../../../assets/css/Rooms/Moscow.css";
 import magazine from "../../../assets/img/magazine.png";
 
 const MagazineTest = ({ setModalMagazine }) => {
-	const [step, setStep] = useState(0);
-	const [value, setValue] = useState("");
-	const [scoreTable, setScoreTable] = useState([""]);
 
-	const handleChange = async (e) => {
-		setValue(e.target.value);
-		await console.log(value);
-	};
+  const [step, setStep] = useState(0);
+  const [value, setValue] = useState("");
+  const [score, setScore] = useState({
+    playerOne: 0,
+    playerTwo: 0,
+    playerThree: 0,
+    playerFour: 0,
+    playerFive: 0,
+  });
 
-	let arr = [];
-	const handleClick = () => {
-		if (step < 7) {
-			setStep(step + 1);
-			arr.push(value);
-			console.log(arr);
-		} else {
-			setModalMagazine("off");
-			setStep(0);
-		}
-		setScoreTable(arr);
-		console.log(scoreTable);
-	};
-	// useEffect(() => {}, [value]);
+  const handleChange = async (e) => {
+    setValue(e.target.value);
+    await console.log(value);
+    setScore({ ...score, [e.target.id]: score[e.target.id] + 1 });
+  };
+
+  const handleSubmit = (e) => {};
+
+  const handleClick = () => {
+    if (step < 7) {
+      setStep(step + 1);
+    } else {
+      setModalMagazine("off");
+      setStep(0);
+    }
+  };
+  // useEffect(() => {}, [value]);
 
 	const russianTest = [
 		{
@@ -79,41 +84,41 @@ const MagazineTest = ({ setModalMagazine }) => {
 			button: "Suivant",
 		},
 
-		{
-			question: "Qui pourrait défier un Russe aux échecs?",
-			text: "",
-			picture: "https://pbs.twimg.com/media/D5Y68WEXkAAFRp3.jpg",
-			button: "Voir les résultats",
-		},
-		{
-			question:
-				"Bravo tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! ",
-			text: "",
-			picture: "https://media.giphy.com/media/P0RWkdsRpK7ss/giphy.gif",
-			button: "Fermer",
-		},
-	];
+    {
+      question: "Qui pourrait défier un Russe aux échecs?",
+      text: "",
+      picture: "https://pbs.twimg.com/media/D5Y68WEXkAAFRp3.jpg",
+      button: "Voir les résultats",
+    },
+    {
+      question:
+        "Bravo BigJon, tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! ",
+      text: "",
+      picture: "https://media.giphy.com/media/P0RWkdsRpK7ss/giphy.gif",
+      button: "Fermer",
+    },
+  ];
 
-	const testStep = russianTest[step];
-	return (
-		<div className="modal-container">
-			<img
-				className="modal-item-mag"
-				src={testStep.picture}
-				alt="magazine cosmo Russe"
-			/>
-			<div className="modal-infos">
-				<div className="header">{testStep.question}</div>
-				<div className="modal-text">{testStep.text}</div>
-				<div className={step === 0 || step === 7 ? "form-off" : "form-on"}>
-					<input
-						type="radio"
-						id="playerOne"
-						name={`step-${step}`}
-						value="Big Jon"
-						onChange={handleChange}
-					/>
-					<label for="playerOne">Big Jon</label>
+  const testStep = russianTest[step];
+  return (
+    <div className="modal-container">
+      <img
+        className="modal-item-mag"
+        src={testStep.picture}
+        alt="magazine cosmo Russe"
+      />
+      <div className="modal-infos">
+        <div className="header">{testStep.question}</div>
+        <div className="modal-text">{testStep.text}</div>
+        <form className={step === 0 || step === 7 ? "form-off" : "form-on"}>
+          <input
+            type="radio"
+            id="playerOne"
+            name={`step-${step}`}
+            value="Big Jon"
+            onChange={handleChange}
+          />
+          <label for="playerOne">Big Jon</label>
 
 					<input
 						type="radio"
@@ -141,22 +146,25 @@ const MagazineTest = ({ setModalMagazine }) => {
 						onChange={handleChange}
 					/>
 					<label for="playerFour">Fanny</label>
+          <input
+            type="radio"
+            id="playerFive"
+            name={`step-${step}`}
+            value="StellaCake"
+            onChange={handleChange}
+          />
+          <label for="playerFive">Stellacake</label>
+        </form>
+        <button
+          className="close-btn"
+          onSubmit={() => handleSubmit}
+          onClick={() => handleClick()}>
+          {testStep.button}
+        </button>
+      </div>
+    </div>
+  );
 
-					<input
-						type="radio"
-						id="playerFive"
-						name={`step-${step}`}
-						value="StellaCake"
-						onChange={handleChange}
-					/>
-					<label for="playerFive">Stellacake</label>
-				</div>
-				<button className="close-btn" onClick={() => handleClick()}>
-					{testStep.button}
-				</button>
-			</div>
-		</div>
-	);
 };
 
 export default MagazineTest;
