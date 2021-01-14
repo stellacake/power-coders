@@ -1,14 +1,156 @@
+.moscow-room {
+	width: 75vw;
+	height: auto;
+	position: relative;
+}
+
+.hotel-room {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.moscow-book {
+	position: absolute;
+	top: 70%;
+	left: 35%;
+	width: 3.5%;
+	height: 5.5%;
+	border: solid black 1px;
+}
+
+.moscow-window {
+	position: absolute;
+	top: 34%;
+	left: 77%;
+	width: 23%;
+	height: 22%;
+	border: solid black 1px;
+}
+
+.moscow-painting {
+	position: absolute;
+	top: 36%;
+	left: 14%;
+	width: 18%;
+	height: 18%;
+	border: solid black 1px;
+}
+
+.moscow-mir {
+	position: absolute;
+	top: 7%;
+	left: 0%;
+	width: 19%;
+	height: 15%;
+	border: solid black 1px;
+	animation: mir-orbite 60s infinite linear;
+	-webkit-animation: mir-orbite 60s infinite linear;
+}
+
+@keyframes mir-orbite {
+	0% {
+		left: -25vh;
+	}
+	50% {
+		left: 85vh;
+	}
+	100% {
+		left: -25vh;
+	}
+}
+
+@-webkit-keyframes mir-orbite {
+	0% {
+		left: -10%;
+	}
+	50% {
+		left: 110%;
+	}
+	100% {
+		left: -10%;
+	}
+}
+
+.moscow-musicbox {
+	position: absolute;
+	top: 86%;
+	left: 5%;
+	width: 5%;
+	height: 9%;
+	border: solid black 1px;
+}
+
+.moscow-magazine {
+	position: absolute;
+	top: 73%;
+	left: 25%;
+	width: 4%;
+	height: 7%;
+	border: solid black 1px;
+}
+
+.moscow-phone {
+	position: absolute;
+	top: 67%;
+	left: 91%;
+	width: 6%;
+	height: 8%;
+	border: solid black 1px;
+}
+
+.moscow-tv {
+	position: absolute;
+	top: 42%;
+	left: 54%;
+	width: 11%;
+	height: 13%;
+	border: solid black 1px;
+}
+
+.moscow-dolls {
+	position: absolute;
+	top: 59%;
+	left: 63%;
+	width: 6%;
+	height: 8%;
+	border: solid black 1px;
+}
+
+.moscow-cocktail {
+	position: absolute;
+	top: 65%;
+	left: 80%;
+	width: 2%;
+	height: 4%;
+	border: solid black 1px;
+}
+
+.moscow-book-area,
+.moscow-window-area,
+.moscow-painting-area,
+.moscow-mir-area,
+.moscow-musicbox-area,
+.moscow-magazine-area,
+.moscow-phone-area,
+.moscow-tv-area,
+.moscow-dolls-area,
+.moscow-cocktail-area {
+	width: 100%;
+	height: 100%;
+}
+
 .fact-off {
 	display: none;
 }
 
 .fact-on {
+	z-index: 50;
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100vw;
+	width: 75vw;
 	height: 100vh;
-	overflow: scroll;
 	background: linear-gradient(
 		148.74deg,
 		rgb(106, 169, 255, 0.8),
@@ -16,11 +158,21 @@
 	);
 }
 
-.modal-infos {
-	z-index: 2;
+.modal-container {
+	display: flex;
 	background-color: white;
-	width: 50vw;
-	height: 50vh;
+	width: 80%;
+	height: 80%;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+.modal-item {
+	width: 50%;
+}
+
+.modal-infos {
+	width: 50%;
 	color: grey;
 	justify-content: center;
 	align-items: center;
@@ -28,7 +180,6 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	margin-top: 20vh;
 }
 
 .header {
@@ -60,10 +211,4 @@
 	background-color: rgb(122, 207, 238);
 	text-decoration: none;
 	cursor: pointer;
-}
-
-.moscow-book {
-	position: absolute;
-	top: 30%;
-	left: 50%;
 }
