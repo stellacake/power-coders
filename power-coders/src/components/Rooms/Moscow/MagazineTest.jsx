@@ -17,7 +17,7 @@ const players = [
   },
   {
     id: "playerFour",
-    value: "Fanny",
+    value: "Fannochka",
   },
   {
     id: "playerFive",
@@ -179,8 +179,7 @@ const MagazineTest = ({ setModalMagazine }) => {
           disabled={step !== 0 && step !== 7 && currentValue.length === 0}
           className="close-btn"
           onSubmit={() => handleSubmit}
-          onClick={() => handleClick()}
-        >
+          onClick={() => handleClick()}>
           {testStep.button}
         </button>
       </div>
