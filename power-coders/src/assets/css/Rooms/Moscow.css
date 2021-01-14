@@ -43,6 +43,11 @@
 	animation: mir-orbite 60s infinite linear;
 	-webkit-animation: mir-orbite 60s infinite linear;
 }
+.radioContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @keyframes mir-orbite {
 	0% {
 		left: -25vh;
@@ -190,6 +195,15 @@
 .moscow-mir-area {
 	object-fit: contain;
 }
+
+.turnradio-on {
+  position: absolute;
+  top: 80%;
+  left: 90%;
+  width: 5%;
+  height: 4%;
+}
+
 .fact-off {
 	display: none;
 }

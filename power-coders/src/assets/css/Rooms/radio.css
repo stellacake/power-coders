@@ -1,0 +1,25 @@
+.radio__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 84%;
+  width: 5%;
+  height: 5%;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.radio__figure {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  margin: 5px;
+}
+.radio__title {
+  text-align: center;
+}
+.radio__audio {
+  height: 25px;
+}

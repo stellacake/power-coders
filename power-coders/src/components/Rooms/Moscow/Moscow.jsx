@@ -25,6 +25,7 @@ import MagazineTest from "./MagazineTest";
 import RussianDolls from "./games/RussianDolls";
 import Newspaper from "./games/newspaper/Newspaper";
 import WhiteRussian from "./games/whiteRussian/WhiteRussian";
+import Radio from "./games/Radio/Radio";
 
 
 const Moscow = () => {
@@ -239,6 +240,8 @@ const Moscow = () => {
           </div>
         </div>
       </div>
+      <div className="radioContainer">
+        <Radio />
       <div className="moscow-tea">
         <div
           className="moscow-tea-area"
