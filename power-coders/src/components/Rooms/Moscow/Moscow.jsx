@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
+import Newspaper from "./games/Newspaper";
+import window from "../../../assets/img/window.png";
+import painting from "../../../assets/img/painting.png";
+// import mir from "../../../assets/img/mir.png";
+import musicbox from "../../../assets/img/musicbox.png";
+
+// import phone from "../../../assets/img/phone.png";
+// import cocktail from "../../../assets/img/cocktail.png";
 import { moscowFacts } from "./culturalFacts";
 import MagazineTest from "./MagazineTest";
 import "../../../assets/css/Rooms/Moscow.css";
 import moscowRoom from "../../../assets/img/moscow-room.png";
 import book from "../../../assets/img/book.png";
-
-// import book from "../../../assets/img/book.png";
-// import cocktail from "../../../assets/img/cocktail.png";
 
 const Moscow = () => {
   const [modalBook, setModalBook] = useState("off");
@@ -16,6 +21,11 @@ const Moscow = () => {
   const [modalMir, setModalMir] = useState("off");
   const [modalMagazine, setModalMagazine] = useState("off");
   const [modalMusicbox, setModalMusicbox] = useState("off");
+	// const [modalPhone, setModalPhone] = useState("off");
+	// const [modalTv, setModalTv] = useState("off");
+	// const [modalDolls, setModalDolls] = useState("off");
+	// const [modalCocktail, setModalCocktail] = useState("off");
+	const [modalNewspaper, setModalNewspaper] = useState("off");
   return (
     <div className="moscow-room">
       <img className="hotel-room" src={moscowRoom} alt="chambre d'hôtel" />
@@ -128,6 +138,20 @@ const Moscow = () => {
       <div className="moscow-cocktail">
         <div className="moscow-cocktail-area"></div>
       </div>
+      	<div className="moscow-newspaper">
+				<div
+					className="moscow-newspaper-area"
+					onClick={() => setModalNewspaper("on")}
+				></div>
+				<div className={`fact-${modalNewspaper}`}>
+					<div className="modal-container-game">
+						<Newspaper />
+						<div className="close-btn" onClick={() => setModalNewspaper("off")}>
+							Fermer
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
   );
 };
