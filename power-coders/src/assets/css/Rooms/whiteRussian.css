@@ -29,8 +29,12 @@
 }
 
 .whiteRussian__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  width: 400px;
+  width: 100%;
   margin: auto;
 }
 

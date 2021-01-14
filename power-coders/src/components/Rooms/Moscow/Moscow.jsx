@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 
-import Newspaper from "./games/Newspaper";
 import window from "../../../assets/img/window.png";
 import painting from "../../../assets/img/painting.png";
 // import mir from "../../../assets/img/mir.png";
 import musicbox from "../../../assets/img/musicbox.png";
-
-// import phone from "../../../assets/img/phone.png";
-// import cocktail from "../../../assets/img/cocktail.png";
-import { moscowFacts } from "./culturalFacts";
-import MagazineTest from "./MagazineTest";
-import "../../../assets/css/Rooms/Moscow.css";
 import moscowRoom from "../../../assets/img/moscow-room.png";
 import book from "../../../assets/img/book.png";
+// import phone from "../../../assets/img/phone.png";
+// import cocktail from "../../../assets/img/cocktail.png";
+
+import "../../../assets/css/Rooms/Moscow.css";
+
+import { moscowFacts } from "./culturalFacts";
+import MagazineTest from "./MagazineTest";
+import Newspaper from "./games/newspaper/Newspaper";
+import WhiteRussian from "./games/whiteRussian/WhiteRussian";
 
 const Moscow = () => {
   const [modalBook, setModalBook] = useState("off");
@@ -21,18 +23,20 @@ const Moscow = () => {
   const [modalMir, setModalMir] = useState("off");
   const [modalMagazine, setModalMagazine] = useState("off");
   const [modalMusicbox, setModalMusicbox] = useState("off");
-	// const [modalPhone, setModalPhone] = useState("off");
-	// const [modalTv, setModalTv] = useState("off");
-	// const [modalDolls, setModalDolls] = useState("off");
-	// const [modalCocktail, setModalCocktail] = useState("off");
-	const [modalNewspaper, setModalNewspaper] = useState("off");
+  const [modalNewspaper, setModalNewspaper] = useState("off");
+  const [modalCocktail, setModalCocktail] = useState("off");
+
+  // const [modalPhone, setModalPhone] = useState("off");
+  // const [modalTv, setModalTv] = useState("off");
+  // const [modalDolls, setModalDolls] = useState("off");
   return (
     <div className="moscow-room">
       <img className="hotel-room" src={moscowRoom} alt="chambre d'hôtel" />
       <div className="moscow-book">
         <div
           className="moscow-book-area"
-          onClick={() => setModalBook("on")}></div>
+          onClick={() => setModalBook("on")}
+        ></div>
         <div className={`fact-${modalBook}`}>
           <div className="modal-container">
             <img className="modal-item" src={book} alt="livre Guerre et Paix" />
@@ -49,7 +53,8 @@ const Moscow = () => {
       <div className="moscow-window">
         <div
           className="moscow-window-area"
-          onClick={() => setModalWindow("on")}></div>
+          onClick={() => setModalWindow("on")}
+        ></div>
         <div className={`fact-${modalWindow}`}>
           <div className="modal-container">
             <img className="modal-item" src="" alt="vue sur la Place Rouge" />
@@ -66,7 +71,8 @@ const Moscow = () => {
       <div className="moscow-painting">
         <div
           className="moscow-painting-area"
-          onClick={() => setModalPainting("on")}></div>
+          onClick={() => setModalPainting("on")}
+        ></div>
         <div className={`fact-${modalPainting}`}>
           <div className="modal-container">
             <img className="modal-item" src="" alt="tableau de Kandinsky" />
@@ -75,7 +81,8 @@ const Moscow = () => {
               <div className="modal-text">{moscowFacts.painting}</div>
               <div
                 className="close-btn"
-                onClick={() => setModalPainting("off")}>
+                onClick={() => setModalPainting("off")}
+              >
                 Fermer
               </div>
             </div>
@@ -85,7 +92,8 @@ const Moscow = () => {
       <div className="moscow-mir">
         <div
           className="moscow-mir-area"
-          onClick={() => setModalMir("on")}></div>
+          onClick={() => setModalMir("on")}
+        ></div>
         <div className={`fact-${modalMir}`}>
           <div className="modal-container">
             <img className="modal-item" src="" alt="station MIR" />
@@ -102,7 +110,8 @@ const Moscow = () => {
       <div className="moscow-musicbox">
         <div
           className="moscow-musicbox-area"
-          onClick={() => setModalMusicbox("on")}></div>
+          onClick={() => setModalMusicbox("on")}
+        ></div>
         <div className={`fact-${modalMusicbox}`}>
           <div className="modal-container">
             <img className="modal-item" src="" alt="boîte à musique" />
@@ -111,7 +120,8 @@ const Moscow = () => {
               <div className="modal-text">{moscowFacts.Musicbox}</div>
               <div
                 className="close-btn"
-                onClick={() => setModalMusicbox("off")}>
+                onClick={() => setModalMusicbox("off")}
+              >
                 Fermer
               </div>
             </div>
@@ -121,7 +131,8 @@ const Moscow = () => {
       <div className="moscow-magazine">
         <div
           className="moscow-magazine-area"
-          onClick={() => setModalMagazine("on")}></div>
+          onClick={() => setModalMagazine("on")}
+        ></div>
         <div className={`fact-${modalMagazine}`}>
           <MagazineTest setModalMagazine={setModalMagazine} />
         </div>
@@ -138,20 +149,34 @@ const Moscow = () => {
       <div className="moscow-cocktail">
         <div className="moscow-cocktail-area"></div>
       </div>
-      	<div className="moscow-newspaper">
-				<div
-					className="moscow-newspaper-area"
-					onClick={() => setModalNewspaper("on")}
-				></div>
-				<div className={`fact-${modalNewspaper}`}>
-					<div className="modal-container-game">
-						<Newspaper />
-						<div className="close-btn" onClick={() => setModalNewspaper("off")}>
-							Fermer
-						</div>
-					</div>
-				</div>
-			</div>
+      <div className="moscow-newspaper">
+        <div
+          className="moscow-newspaper-area"
+          onClick={() => setModalNewspaper("on")}
+        ></div>
+        <div className={`fact-${modalNewspaper}`}>
+          <div className="modal-container-game">
+            <Newspaper />
+            <div className="close-btn" onClick={() => setModalNewspaper("off")}>
+              Fermer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="moscow-cocktail">
+        <div
+          className="moscow-cocktail-area"
+          onClick={() => setModalCocktail("on")}
+        ></div>
+        <div className={`fact-${modalCocktail}`}>
+          <div className="modal-container-game">
+            <WhiteRussian />
+            <div className="close-btn" onClick={() => setModalCocktail("off")}>
+              Fermer
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

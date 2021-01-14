@@ -49,7 +49,7 @@ function WhiteRussian() {
 
   return (
     <div className="whiteRussian__wrapper">
-      <h2>Le White Russian</h2>
+      <h2 className="whiteRussian__title">Le White Russian</h2>
       <p className="whiteRussian__paragraph">
         Connaissez-vous la recette de ce cocktail ?
       </p>
