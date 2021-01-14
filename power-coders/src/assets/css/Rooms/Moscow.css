@@ -1,69 +1,91 @@
+.moscow-room {
+  background-image: url("../../img/roomwithobjects.png");
+  height: 100vh;
+  width: 75vw;
+  position: absolute;
+}
+
 .fact-off {
-	display: none;
+  display: none;
 }
 
 .fact-on {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	overflow: scroll;
-	background: linear-gradient(
-		148.74deg,
-		rgb(106, 169, 255, 0.8),
-		rgb(211, 243, 194, 0.8)
-	);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  background: linear-gradient(
+    148.74deg,
+    rgb(106, 169, 255, 0.8),
+    rgb(211, 243, 194, 0.8)
+  );
+}
+
+.modal-container {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  margin-top: 20vh;
 }
 
 .modal-infos {
-	z-index: 2;
-	background-color: white;
-	width: 50vw;
-	height: 50vh;
-	color: grey;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-top: 20vh;
+  color: grey;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .header {
-	color: var(--primary);
-	font-size: 20px;
-	font-weight: 500;
-	text-align: center;
-	margin: 2rem;
-	padding: auto;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 2rem;
+  padding: auto;
 }
+
 .modal-text {
-	width: 80%;
-	font-size: 1.2rem;
-	line-height: 2rem;
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .close-btn {
-	margin: 2rem;
-	border: 1px solid rgb(122, 207, 238);
-	color: rgb(122, 207, 238);
-	border-radius: 20px;
-	padding: 0.5rem 2rem;
-	width: fit-content;
+  margin: 2rem;
+  border: 1px solid rgb(122, 207, 238);
+  color: rgb(122, 207, 238);
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  width: fit-content;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-	color: white;
-	background-color: rgb(122, 207, 238);
-	text-decoration: none;
-	cursor: pointer;
+  color: white;
+  background-color: rgb(122, 207, 238);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .moscow-book {
-	position: absolute;
-	top: 30%;
-	left: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.moscow-magazine-area {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  border: solid 1px black;
+  width: 30px;
+  height: 30px;
 }
