@@ -7,7 +7,7 @@ export const moscowFacts = {
 		"Vassily Kandinsky a été un des pionniers de l’art abstrait. L’idée lui serait venue un soir, alors qu’il rentrait chez lui. En poussant la porte, il aperçut un magnifique tableau « d’une indescriptible beauté, baigné de couleurs intérieures ». Il n’y retrouva alors rien d’autre que des formes et des couleurs, n’y reconnut aucun sujet, puis il se rendit soudain compte qu’il s’agissait d’une de ses toiles renversée sur le côté, contre le mur.",
 	mir:
 		"La station Mir, du russe Мир signifie Paix et Monde. L'astronaute Sergueï Krikalev a assisté depuis Mir à la disparition de son pays, l'URSS, où Boris Eltsine succédait à Mikhaïl Gorbatchev. Parti d'URSS, revenu en Russie.",
-	dancer:
+	musicbox:
 		"Anna Pavlova est considérée pour beaucoup comme la meilleure danseuse de ballet classique. C'est elle qui a donné son nom à la célèbre pâtisserie. Elle a été une étoile du Ballet impérial russe, des Ballets russes de Serge Diaghilev et la première ballerine à parcourir le monde avec sa propre compagnie.",
 };
 
