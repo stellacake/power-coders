@@ -26,10 +26,7 @@ const SubTitles = ({ setModalTV }) => {
     return timeLeft;
   }, [timeLeft, timerActive]);
 
-  const [definitiveAnswer, setDefinitiveAnswer] = useState("");
-
-  console.log(answer);
-  console.log(definitiveAnswer);
+  const [definitiveAnswer, setDefinitiveAnswer] = useState(null);
 
   const { subtitle } = answer;
 
@@ -84,7 +81,7 @@ const SubTitles = ({ setModalTV }) => {
         {definitiveAnswer}
       </div>
       <div className={timeLeft === 0 ? "hide-answer" : "show-answer"}>
-        {timeLeft}
+        {definitiveAnswer ? `Merci!` : ""} {timerActive ? `${timeLeft} s` : ""}
       </div>
     </div>
   );
