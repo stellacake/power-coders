@@ -1,0 +1,44 @@
+.textContainer {
+  display: flex;
+  margin-right: 20px;
+  color: white;
+  height: 80%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.activeContainer {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding-bottom: 50px;
+}
+
+.activeContainer-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeItem {
+  margin-right: 10px;
+}
+
+.activeContainer img {
+  padding-left: 10px;
+}
+
+.textContainer h1 {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 425px) and (max-width: 1200px) {
+  .textContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .textContainer {
+    font-size: 20px;
+  }
+}
