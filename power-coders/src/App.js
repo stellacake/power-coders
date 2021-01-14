@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Route path='/' exact component={Join} />
       <Route path='/chat' component={Chat} />
-      {/* 	<Moscow />
+      {/*       <Moscow />
       <Newspaper /> */}
     </Router>
   );
