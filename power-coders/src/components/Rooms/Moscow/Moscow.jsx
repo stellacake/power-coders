@@ -11,10 +11,10 @@ import window from "../../../assets/img/window.png";
 import painting from "../../../assets/img/painting.png";
 // import mir from "../../../assets/img/mir.png";
 import musicbox from "../../../assets/img/musicbox.png";
+import Voice from "../../Interactions/Voice";
 
 // import magazine from "../../../assets/img/magazine.png";
-// import phone from "../../../assets/img/phone.png";
-// import cocktail from "../../../assets/img/cocktail.png";
+import phone from "../../../assets/img/phone.png";
 
 const Moscow = () => {
 	const [modalBook, setModalBook] = useState("off");
@@ -23,13 +23,14 @@ const Moscow = () => {
 	const [modalMir, setModalMir] = useState("off");
 	const [modalMusicbox, setModalMusicbox] = useState("off");
 	// const [modalMagazine, setModalMagazine] = useState("off");
-	// const [modalPhone, setModalPhone] = useState("off");
+	const [modalPhone, setModalPhone] = useState("off");
 	// const [modalTv, setModalTv] = useState("off");
 	// const [modalDolls, setModalDolls] = useState("off");
 	// const [modalCocktail, setModalCocktail] = useState("off");
 	const [modalNewspaper, setModalNewspaper] = useState("off");
 	return (
 		<div className="moscow-room">
+			<Voice />
 			<img className="hotel-room" src={moscowRoom} alt="chambre d'hôtel" />
 			<div className="moscow-book">
 				<div
@@ -139,7 +140,22 @@ const Moscow = () => {
 				<div className="moscow-magazine-area"></div>
 			</div>
 			<div className="moscow-phone">
-				<div className="moscow-phone-area"></div>
+				<div
+					className="moscow-phone-area"
+					onClick={() => setModalPhone("on")}
+				></div>
+				<div className={`fact-${modalPhone}`}>
+					<div className="modal-container">
+						<img className="modal-item" src={phone} alt="téléphone" />
+						<div className="modal-infos">
+							<div className="header">Family time !</div>
+							<div className="modal-text">{moscowFacts.phone}</div>
+							<div className="close-btn" onClick={() => setModalPhone("off")}>
+								Fermer
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div className="moscow-tv">
 				<div className="moscow-tv-area"></div>

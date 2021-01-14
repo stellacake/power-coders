@@ -16,6 +16,7 @@
 	left: 35%;
 	width: 3.5%;
 	height: 5.5%;
+	cursor: pointer;
 }
 
 .moscow-window {
@@ -24,6 +25,7 @@
 	left: 77%;
 	width: 23%;
 	height: 22%;
+	cursor: pointer;
 }
 
 .moscow-painting {
@@ -32,6 +34,7 @@
 	left: 14%;
 	width: 18%;
 	height: 18%;
+	cursor: pointer;
 }
 
 .moscow-mir {
@@ -41,6 +44,7 @@
 	width: 19%;
 	height: 15%;
 	border: solid black 1px;
+	cursor: pointer;
 	animation: mir-orbite 60s infinite linear;
 	-webkit-animation: mir-orbite 60s infinite linear;
 }
@@ -75,6 +79,7 @@
 	left: 5%;
 	width: 5%;
 	height: 9%;
+	cursor: pointer;
 }
 
 .moscow-magazine {
@@ -83,6 +88,7 @@
 	left: 25%;
 	width: 4%;
 	height: 7%;
+	cursor: pointer;
 }
 
 .moscow-phone {
@@ -91,6 +97,7 @@
 	left: 91%;
 	width: 6%;
 	height: 8%;
+	cursor: pointer;
 }
 
 .moscow-tv {
@@ -99,6 +106,7 @@
 	left: 54%;
 	width: 11%;
 	height: 13%;
+	cursor: pointer;
 }
 
 .moscow-dolls {
@@ -107,6 +115,7 @@
 	left: 63%;
 	width: 6%;
 	height: 8%;
+	cursor: pointer;
 }
 
 .moscow-cocktail {
@@ -115,6 +124,7 @@
 	left: 80%;
 	width: 2%;
 	height: 4%;
+	cursor: pointer;
 }
 
 .moscow-newspaper {
@@ -123,6 +133,7 @@
 	left: 62%;
 	width: 5%;
 	height: 6%;
+	cursor: pointer;
 	border: solid black 1px;
 }
 
@@ -165,6 +176,7 @@
 	height: 80%;
 	margin-top: 10%;
 	margin-left: 10%;
+	cursor: initial;
 }
 
 .modal-container-game {
@@ -177,6 +189,7 @@
 	height: 80%;
 	margin-top: 10%;
 	margin-left: 10%;
+	cursor: initial;
 }
 
 .modal-item {

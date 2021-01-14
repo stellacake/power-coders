@@ -9,6 +9,8 @@ export const moscowFacts = {
 		"La station Mir, du russe Мир signifie Paix et Monde. L'astronaute Sergueï Krikalev a assisté depuis Mir à la disparition de son pays, l'URSS, où Boris Eltsine succédait à Mikhaïl Gorbatchev. Parti d'URSS, revenu en Russie.",
 	musicbox:
 		"Anna Pavlova est considérée pour beaucoup comme la meilleure danseuse de ballet classique. C'est elle qui a donné son nom à la célèbre pâtisserie. Elle a été une étoile du Ballet impérial russe, des Ballets russes de Serge Diaghilev et la première ballerine à parcourir le monde avec sa propre compagnie.",
+	phone:
+		"Non, ce ne sont pas les Etats-Unis au bout du fil ! Mais pourquoi ne pas appeler vos proches pour prendre de leurs nouvelles ? ;) ",
 };
 
 export const otherFacts = "";
