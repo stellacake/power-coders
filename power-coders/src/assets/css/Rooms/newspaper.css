@@ -1,54 +1,54 @@
 .newspaper__wrapper {
-  background-image: url("../../images/newspaper.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  margin: auto;
+	background-image: url("../../img/newspaper.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	margin: auto;
 }
 .newspaper__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	margin: 0;
 }
 .newspaper__paragraph {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 500;
 }
 .newspaper__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  max-width: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	max-width: 250px;
 }
 .newspaper__word {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255, 0.9);
-  width: 100px;
-  height: 30px;
-  border-radius: 15px;
-  margin: 10px;
-  cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(255, 255, 255, 0.9);
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	margin: 10px;
+	cursor: pointer;
 }
 .newspaper__word--good {
-  background-color: rgb(118, 210, 118);
+	background-color: rgb(118, 210, 118);
 }
 .newspaper__word--wrong {
-  background-color: rgb(216, 113, 113);
+	background-color: rgb(216, 113, 113);
 }

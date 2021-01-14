@@ -1,14 +1,18 @@
 import "./App.css";
 import SubTitles from "./components/Rooms/Moscow/game/SubTitles";
 import React from "react";
-import Moscow from "./components/Rooms/Moscow/Moscow";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { Join, Chat } from "./components/LoginPage";
 
 function App() {
-  return (
-    <div className="App">
-      <Moscow />
-    </div>
-  );
+	return (
+		<Router>
+			<Route path="/" exact component={Join} />
+			<Route path="/chat" component={Chat} />
+		</Router>
+	);
 }
 
 export default App;
