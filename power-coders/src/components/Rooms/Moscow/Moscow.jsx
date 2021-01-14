@@ -15,6 +15,7 @@ import { moscowFacts } from "./culturalFacts";
 import MagazineTest from "./MagazineTest";
 import Newspaper from "./games/newspaper/Newspaper";
 import WhiteRussian from "./games/whiteRussian/WhiteRussian";
+import Radio from "./games/Radio/Radio";
 
 const Moscow = () => {
   const [modalBook, setModalBook] = useState("off");
@@ -176,6 +177,9 @@ const Moscow = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="radioContainer">
+        <Radio />
       </div>
     </div>
   );

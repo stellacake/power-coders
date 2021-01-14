@@ -37,11 +37,6 @@ function WhiteRussian() {
     [whiteRussianArray]
   );
 
-  const numberOfIngredients = useMemo(
-    () => whiteRussianArray.filter((item) => item.value === true).length,
-    [whiteRussianArray]
-  );
-
   const numberOfIngredientsFound = useMemo(
     () => wordsClicked.filter((item) => item.value === true).length,
     [wordsClicked]
