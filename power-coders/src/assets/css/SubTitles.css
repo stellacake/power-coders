@@ -1,0 +1,40 @@
+.subtitle-modal {
+    position: absolute;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+video {
+    height: 500px;
+}
+
+.subtitle-label {
+    font-size: calc(1vh + 1vw);
+}
+
+.subtitle-input {
+    width: 80%;
+    height: 50px;
+    border-radius: 26px;
+    font-size: calc(1vh + 1vw);
+
+}
+
+.subtitle-button {
+    background-color: darkturquoise;
+    width: 25%;
+    height: 50px;
+    border-radius: 26px;
+}
+
+.hide-answer {
+    display: none;
+}
+
+.show-answer {
+    display: block;
+    font-size: calc(1vh + 1vw)
+}
