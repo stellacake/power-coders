@@ -98,7 +98,7 @@ const MagazineTest = ({ setModalMagazine }) => {
   return (
     <div className="modal-container">
       <img
-        className="modal-item"
+        className="modal-item-mag"
         src={testStep.picture}
         alt="magazine cosmo Russe"
       />
