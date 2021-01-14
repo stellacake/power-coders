@@ -2,14 +2,13 @@ import React from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import { Join } from "./components/LoginPage";
-import Moscow from "./components/Rooms/Moscow/Moscow";
+import { Join, Chat } from "./components/LoginPage";
 
 function App() {
 	return (
 		<Router>
 			<Route path="/" exact component={Join} />
-			<Route path="/moscow" component={Moscow} />
+			<Route path="/chat" component={Chat} />
 		</Router>
 	);
 }
