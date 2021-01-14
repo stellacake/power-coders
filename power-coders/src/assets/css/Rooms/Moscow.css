@@ -220,6 +220,9 @@
   cursor: pointer;
 }
 
+.russian-doll {
+  height: 75%;
+}
 .form-off {
   display: none;
 }
