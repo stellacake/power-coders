@@ -61,7 +61,7 @@ const SubTitles = ({ setModalTV }) => {
           <PlayToggle />
         </ControlBar>
       </Player>
-      <label className="subtitle-label" for="subtitle">
+      <label className="subtitle-label" htmlFor="subtitle">
         Imaginez les sous-titres!
       </label>
       <input
