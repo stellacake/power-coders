@@ -5,25 +5,29 @@ import magazine from "../../../assets/img/magazine.png";
 const MagazineTest = ({ setModalMagazine }) => {
   const [step, setStep] = useState(0);
   const [value, setValue] = useState("");
-  const [scoreTable, setScoreTable] = useState([""]);
+  const [score, setScore] = useState({
+    playerOne: 0,
+    playerTwo: 0,
+    playerThree: 0,
+    playerFour: 0,
+    playerFive: 0,
+  });
 
   const handleChange = async (e) => {
     setValue(e.target.value);
     await console.log(value);
+    setScore({ ...score, [e.target.id]: score[e.target.id] + 1 });
   };
 
-  let arr = [];
+  const handleSubmit = (e) => {};
+
   const handleClick = () => {
     if (step < 7) {
       setStep(step + 1);
-      arr.push(value);
-      console.log(arr);
     } else {
       setModalMagazine("off");
       setStep(0);
     }
-    setScoreTable(arr);
-    console.log(scoreTable);
   };
   // useEffect(() => {}, [value]);
 
@@ -87,7 +91,7 @@ const MagazineTest = ({ setModalMagazine }) => {
     },
     {
       question:
-        "Bravo tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! ",
+        "Bravo BigJon, tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! ",
       text: "",
       picture: "https://media.giphy.com/media/P0RWkdsRpK7ss/giphy.gif",
       button: "Fermer",
@@ -105,7 +109,7 @@ const MagazineTest = ({ setModalMagazine }) => {
       <div className="modal-infos">
         <div className="header">{testStep.question}</div>
         <div className="modal-text">{testStep.text}</div>
-        <div className={step === 0 || step === 7 ? "form-off" : "form-on"}>
+        <form className={step === 0 || step === 7 ? "form-off" : "form-on"}>
           <input
             type="radio"
             id="playerOne"
@@ -150,8 +154,11 @@ const MagazineTest = ({ setModalMagazine }) => {
             onChange={handleChange}
           />
           <label for="playerFive">Stellacake</label>
-        </div>
-        <button className="close-btn" onClick={() => handleClick()}>
+        </form>
+        <button
+          className="close-btn"
+          onSubmit={() => handleSubmit}
+          onClick={() => handleClick()}>
           {testStep.button}
         </button>
       </div>
