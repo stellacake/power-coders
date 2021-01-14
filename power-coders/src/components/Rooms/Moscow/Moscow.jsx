@@ -14,15 +14,17 @@ import window from "../../../assets/img/window.png";
 import painting from "../../../assets/img/painting.png";
 import mir from "../../../assets/img/mir.png";
 import musicbox from "../../../assets/img/musicbox.png";
+// import cocktail from "../../../assets/img/cocktail.png";
+import SubTitles from "./game/SubTitles";
 import phone from "../../../assets/img/phone.png";
 import chapka from "../../../assets/img/chapka.png";
 import tea from "../../../assets/img/tea.png";
 import bottle from "../../../assets/img/bottle.png";
 import metro from "../../../assets/img/metro.png";
-
 import { moscowFacts } from "./culturalFacts";
 
 const Moscow = () => {
+  
 	const [modalBook, setModalBook] = useState("off");
 	const [modalWindow, setModalWindow] = useState("off");
 	const [modalPainting, setModalPainting] = useState("off");
@@ -31,7 +33,7 @@ const Moscow = () => {
 	const [modalMusicbox, setModalMusicbox] = useState("off");
 	const [modalPhone, setModalPhone] = useState("off");
 	const [modalChapka, setModalChapka] = useState("off");
-	const [modalTv, setModalTv] = useState("off");
+	const [modalTV, setModalTV] = useState("off");
 	const [modalDolls, setModalDolls] = useState("off");
 	const [modalNewspaper, setModalNewspaper] = useState("off");
 	const [modalCocktail, setModalCocktail] = useState("off");
@@ -194,17 +196,12 @@ const Moscow = () => {
 					</div>
 				</div>
 			</div>
-			<div className="moscow-tv">
-				<div className="moscow-tv-area" onClick={() => setModalTv("on")}></div>
-				<div className={`fact-${modalTv}`}>
-					<div className="modal-container-game">
-						{/* composant ci */}
-						<div className="close-btn" onClick={() => setModalTv("off")}>
-							Fermer
-						</div>
-					</div>
-				</div>
-			</div>
+    <div className="moscow-tv">
+        <div className="moscow-tv-area" onClick={() => setModalTV("on")}></div>
+        <div className={`fact-${modalTV}`}>
+          <SubTitles setModalTV={setModalTV} />
+        </div>
+      </div>
 			<div className="moscow-dolls">
 				<div
 					className="moscow-dolls-area"
