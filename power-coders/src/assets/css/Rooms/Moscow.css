@@ -8,6 +8,7 @@
   height: 100%;
   object-fit: contain;
 }
+
 .moscow-book {
   position: absolute;
   top: 70%;
@@ -172,8 +173,9 @@
 }
 .modal-text {
   width: 80%;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: justify;
 }
 .close-btn {
   margin: 2rem;
@@ -189,4 +191,8 @@
   background-color: rgb(122, 207, 238);
   text-decoration: none;
   cursor: pointer;
+}
+
+.form-off {
+  display: none;
 }

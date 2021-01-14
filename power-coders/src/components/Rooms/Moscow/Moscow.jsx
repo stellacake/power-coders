@@ -5,6 +5,7 @@ import MagazineTest from "./MagazineTest";
 import "../../../assets/css/Rooms/Moscow.css";
 import moscowRoom from "../../../assets/img/moscow-room.png";
 import book from "../../../assets/img/book.png";
+
 // import book from "../../../assets/img/book.png";
 // import cocktail from "../../../assets/img/cocktail.png";
 
@@ -112,20 +113,7 @@ const Moscow = () => {
           className="moscow-magazine-area"
           onClick={() => setModalMagazine("on")}></div>
         <div className={`fact-${modalMagazine}`}>
-          <div className="modal-container">
-            <img
-              className="modal-item"
-              src={magazine}
-              alt="magazine cosmo Russe"
-            />
-            <div className="modal-infos">
-              <div className="header">Qui est le plus Russé ?</div>
-              <div className="modal-text">
-                {" "}
-                <MagazineTest setModalMagazine={setModalMagazine} />
-              </div>
-            </div>
-          </div>
+          <MagazineTest setModalMagazine={setModalMagazine} />
         </div>
       </div>
       <div className="moscow-phone">
