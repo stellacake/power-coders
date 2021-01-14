@@ -41,4 +41,4 @@ export const newspaperArray = [
   },
 ];
 
-export const trucArray = [];
+export const factisArray = [];

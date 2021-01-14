@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 
 import { newspaperArray } from "./newspaperConstants";
 
-import "../../../../assets/css/newspaper.css";
+import "../../../../../assets/css/Rooms/newspaper.css";
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -15,7 +15,7 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const Newspaper = () => {
+function Newspaper() {
   const [wordsClicked, setWordsClicked] = useState([]);
 
   const handleClick = (name) => {
@@ -41,7 +41,7 @@ const Newspaper = () => {
       <h2 className="newspaper__title">Liste de mots</h2>
       <p className="newspaper__paragraph">
         D'après vous, quels sont les mots russes que vous utilisez sans le
-        savoir ?
+        savoir?
       </p>
       <div className="newspaper__list">
         {newspaperArrayShuffled.map((item) => {
@@ -61,6 +61,6 @@ const Newspaper = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Newspaper;
