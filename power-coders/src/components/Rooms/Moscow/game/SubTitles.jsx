@@ -56,8 +56,7 @@ const SubTitles = ({ setModalTV }) => {
         muted={mute}
         src={urlVideo}
         onEnded={handleTimer}
-        onPlay={handleMute}
-      >
+        onPlay={handleMute}>
         <ControlBar autoHide={false} disableDefaultControls={true}>
           <PlayToggle />
         </ControlBar>
@@ -69,7 +68,7 @@ const SubTitles = ({ setModalTV }) => {
         className="subtitle-input"
         type="text"
         id="subtitle"
-        placeholder="Votre sous-titre!"
+        placeholder="Votre sous-titre"
         value={subtitle}
         onChange={handleChange}
       />

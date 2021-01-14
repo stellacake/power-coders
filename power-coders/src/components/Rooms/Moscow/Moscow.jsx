@@ -52,8 +52,7 @@ const Moscow = () => {
       <div className="moscow-book">
         <div
           className="moscow-book-area"
-          onClick={() => setModalBook("on")}
-        ></div>
+          onClick={() => setModalBook("on")}></div>
         <div className={`fact-${modalBook}`}>
           <div className="modal-container">
             <img className="modal-item" src={book} alt="livre Guerre et Paix" />
@@ -70,8 +69,7 @@ const Moscow = () => {
       <div className="moscow-window">
         <div
           className="moscow-window-area"
-          onClick={() => setModalWindow("on")}
-        ></div>
+          onClick={() => setModalWindow("on")}></div>
         <div className={`fact-${modalWindow}`}>
           <div className="modal-container">
             <img
@@ -92,8 +90,7 @@ const Moscow = () => {
       <div className="moscow-painting">
         <div
           className="moscow-painting-area"
-          onClick={() => setModalPainting("on")}
-        ></div>
+          onClick={() => setModalPainting("on")}></div>
         <div className={`fact-${modalPainting}`}>
           <div className="modal-container">
             <img
@@ -106,8 +103,7 @@ const Moscow = () => {
               <div className="modal-text">{moscowFacts.painting}</div>
               <div
                 className="close-btn"
-                onClick={() => setModalPainting("off")}
-              >
+                onClick={() => setModalPainting("off")}>
                 Fermer
               </div>
             </div>
@@ -137,8 +133,7 @@ const Moscow = () => {
       <div className="moscow-musicbox">
         <div
           className="moscow-musicbox-area"
-          onClick={() => setModalMusicbox("on")}
-        ></div>
+          onClick={() => setModalMusicbox("on")}></div>
         <div className={`fact-${modalMusicbox}`}>
           <div className="modal-container">
             <img className="modal-item" src={musicbox} alt="boîte à musique" />
@@ -147,8 +142,7 @@ const Moscow = () => {
               <div className="modal-text">{moscowFacts.musicbox}</div>
               <div
                 className="close-btn"
-                onClick={() => setModalMusicbox("off")}
-              >
+                onClick={() => setModalMusicbox("off")}>
                 Fermer
               </div>
             </div>
@@ -158,8 +152,7 @@ const Moscow = () => {
       <div className="moscow-magazine">
         <div
           className="moscow-magazine-area"
-          onClick={() => setModalMagazine("on")}
-        ></div>
+          onClick={() => setModalMagazine("on")}></div>
         <div className={`fact-${modalMagazine}`}>
           <MagazineTest setModalMagazine={setModalMagazine} />
         </div>
@@ -167,8 +160,7 @@ const Moscow = () => {
       <div className="moscow-phone">
         <div
           className="moscow-phone-area"
-          onClick={() => setModalPhone("on")}
-        ></div>
+          onClick={() => setModalPhone("on")}></div>
         <div className={`fact-${modalPhone}`}>
           <div className="modal-container">
             <img className="modal-item" src={phone} alt="téléphone" />
@@ -185,8 +177,7 @@ const Moscow = () => {
       <div className="moscow-chapka">
         <div
           className="moscow-chapka-area"
-          onClick={() => setModalChapka("on")}
-        ></div>
+          onClick={() => setModalChapka("on")}></div>
         <div className={`fact-${modalChapka}`}>
           <div className="modal-container">
             <img className="modal-item" src={chapka} alt="chapka" />
@@ -203,15 +194,19 @@ const Moscow = () => {
       <div className="moscow-tv">
         <div className="moscow-tv-area" onClick={() => setModalTV("on")}></div>
         <div className={`fact-${modalTV}`}>
-          <SubTitles setModalTV={setModalTV} />
+          <div className="modal-container-game">
+            <SubTitles setModalTV={setModalTV} />
+            <div className="close-btn" onClick={() => setModalTV("off")}>
+              Fermer
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="moscow-dolls">
         <div
           className="moscow-dolls-area"
-          onClick={() => setModalDolls("on")}
-        ></div>
+          onClick={() => setModalDolls("on")}></div>
         <div className={`fact-${modalDolls}`}>
           <RussianDolls setModalDolls={setModalDolls} />
         </div>
@@ -219,8 +214,7 @@ const Moscow = () => {
       <div className="moscow-newspaper">
         <div
           className="moscow-newspaper-area"
-          onClick={() => setModalNewspaper("on")}
-        ></div>
+          onClick={() => setModalNewspaper("on")}></div>
         <div className={`fact-${modalNewspaper}`}>
           <div className="modal-container-game">
             <Newspaper />
@@ -233,8 +227,7 @@ const Moscow = () => {
       <div className="moscow-cocktail">
         <div
           className="moscow-cocktail-area"
-          onClick={() => setModalCocktail("on")}
-        ></div>
+          onClick={() => setModalCocktail("on")}></div>
         <div className={`fact-${modalCocktail}`}>
           <div className="modal-container-game">
             <WhiteRussian />
@@ -249,8 +242,7 @@ const Moscow = () => {
         <div className="moscow-tea">
           <div
             className="moscow-tea-area"
-            onClick={() => setModalTea("on")}
-          ></div>
+            onClick={() => setModalTea("on")}></div>
           <div className={`fact-${modalTea}`}>
             <div className="modal-container">
               <img className="modal-item" src={tea} alt="Thé russe" />
@@ -267,8 +259,7 @@ const Moscow = () => {
         <div className="moscow-bin">
           <div
             className="moscow-bin-area"
-            onClick={() => setModalBin("on")}
-          ></div>
+            onClick={() => setModalBin("on")}></div>
           <div className={`fact-${modalBin}`}>
             <div className="modal-container">
               <img className="modal-item" src={metro} alt="Pass de métro" />
@@ -285,8 +276,7 @@ const Moscow = () => {
         <div className="moscow-bottle">
           <div
             className="moscow-bottle-area"
-            onClick={() => setModalBottle("on")}
-          ></div>
+            onClick={() => setModalBottle("on")}></div>
           <div className={`fact-${modalBottle}`}>
             <div className="modal-container">
               <img
@@ -299,8 +289,7 @@ const Moscow = () => {
                 <div className="modal-text">{moscowFacts.bottle}</div>
                 <div
                   className="close-btn"
-                  onClick={() => setModalBottle("off")}
-                >
+                  onClick={() => setModalBottle("off")}>
                   Fermer
                 </div>
               </div>
