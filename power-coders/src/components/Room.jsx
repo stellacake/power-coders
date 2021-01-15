@@ -5,7 +5,7 @@ import Chat from "./LoginPage/Chat";
 const Room = ({ location }) => {
   return (
     <div>
-      <Moscow />
+      <Moscow location={location} />
       <Chat location={location} />
     </div>
   );

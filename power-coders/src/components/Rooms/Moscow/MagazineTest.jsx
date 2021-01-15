@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../../assets/css/Rooms/Moscow.css";
 import magazine from "../../../assets/img/magazine.png";
 
+const MagazineTest = ({ handleMagazineOff }) => {
+  
 const players = [
   {
     id: "playerOne",
@@ -25,7 +27,6 @@ const players = [
   },
 ];
 
-const MagazineTest = ({ setModalMagazine }) => {
   const [step, setStep] = useState(0);
   const [winner, setWinner] = useState("");
   const [currentValue, setCurrentValue] = useState("");
@@ -52,7 +53,7 @@ const MagazineTest = ({ setModalMagazine }) => {
       setStep(step + 1);
       setCurrentValue("");
     } else {
-      setModalMagazine("off");
+      handleMagazineOff();
       setStep(0);
       setCurrentValue("");
     }
@@ -161,6 +162,7 @@ const MagazineTest = ({ setModalMagazine }) => {
         <div className="header">{testStep.question}</div>
         <div className="modal-text">{testStep.text}</div>
         <form className={step === 0 || step === 7 ? "form-off" : "form-on"}>
+
           {players.map((player) => (
             <>
               <input
@@ -179,7 +181,8 @@ const MagazineTest = ({ setModalMagazine }) => {
           disabled={step !== 0 && step !== 7 && currentValue.length === 0}
           className="close-btn"
           onSubmit={() => handleSubmit}
-          onClick={() => handleClick()}>
+          onClick={() => handleClick()}
+        >
           {testStep.button}
         </button>
       </div>
