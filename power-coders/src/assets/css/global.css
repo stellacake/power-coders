@@ -2,3 +2,7 @@
 	--main-color: rgb(106, 169, 255);
 	--secondary-color: rgb(211, 243, 194);
 }
+
+* {
+	font-family: "Roboto", sans-serif;
+}
