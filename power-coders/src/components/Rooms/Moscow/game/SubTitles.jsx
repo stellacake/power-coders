@@ -4,7 +4,7 @@ import { Player, ControlBar, PlayToggle, playerReducer } from "video-react";
 import "../../../../assets/css/SubTitles.css";
 import "../../../../../node_modules/video-react/dist/video-react.css"; // import css
 
-const SubTitles = ({ setModalTV }) => {
+const SubTitles = ({ handleTVOff }) => {
   const [answer, setAnswer] = useState({
     subtitle: "",
   });
@@ -40,7 +40,7 @@ const SubTitles = ({ setModalTV }) => {
     if (timeLeft) {
       setDefinitiveAnswer(answer.subtitle);
     } else {
-      setModalTV("off");
+      handleTVOff();
     }
   };
   const [mute, setMute] = useState(true);

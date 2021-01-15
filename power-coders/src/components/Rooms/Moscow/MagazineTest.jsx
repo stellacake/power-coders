@@ -2,8 +2,7 @@ import React, { useState /* useEffect */ } from "react";
 import "../../../assets/css/Rooms/Moscow.css";
 import magazine from "../../../assets/img/magazine.png";
 
-const MagazineTest = ({ setModalMagazine }) => {
-
+const MagazineTest = ({ handleMagazineOff }) => {
   const [step, setStep] = useState(0);
   const [value, setValue] = useState("");
   const [score, setScore] = useState({
@@ -26,63 +25,63 @@ const MagazineTest = ({ setModalMagazine }) => {
     if (step < 7) {
       setStep(step + 1);
     } else {
-      setModalMagazine("off");
+      handleMagazineOff();
       setStep(0);
     }
   };
   // useEffect(() => {}, [value]);
 
-	const russianTest = [
-		{
-			question: "Qui est le plus Russé ? ",
-			text:
-				"Un verre de vodka dans une main, une faucille dans l'autre, qui s'adapaterait le mieux à la vie Moscovite? ",
-			picture: magazine,
-			button: "C'est parti !",
-		},
+  const russianTest = [
+    {
+      question: "Qui est le plus Russé ? ",
+      text:
+        "Un verre de vodka dans une main, une faucille dans l'autre, qui s'adapaterait le mieux à la vie Moscovite? ",
+      picture: magazine,
+      button: "C'est parti !",
+    },
 
-		{
-			question:
-				"Qui serait le meilleur successeur à la tête de la Russie après Poutine ?",
-			text: "",
-			picture:
-				"https://lh3.googleusercontent.com/QJlkBnGplDIpj8UQ0kgXodw9mzx2IBu-v6YlEObcXEcTDum-4Xlaxt9HKMBfYYjpyFti3gDVD15_h2aTxqI5RbivuaZeLwQCPFvf-DAOeCzIlPPjtfQMEHlSwmU1MpOVJhVkaQVKz2bgV-Uc",
-			button: "Suivant",
-		},
+    {
+      question:
+        "Qui serait le meilleur successeur à la tête de la Russie après Poutine ?",
+      text: "",
+      picture:
+        "https://lh3.googleusercontent.com/QJlkBnGplDIpj8UQ0kgXodw9mzx2IBu-v6YlEObcXEcTDum-4Xlaxt9HKMBfYYjpyFti3gDVD15_h2aTxqI5RbivuaZeLwQCPFvf-DAOeCzIlPPjtfQMEHlSwmU1MpOVJhVkaQVKz2bgV-Uc",
+      button: "Suivant",
+    },
 
-		{
-			question:
-				"Lequel d'entre vous pourrait rivaliser avec les Russes à un jeu d'alcool ?",
-			text: "",
-			picture:
-				"https://www.challenges.fr/assets/img/2014/08/26/images_list-r4x3w1000-579634546780f-russie-vodka-chapka-bar.jpg",
-			button: "Suivant",
-		},
+    {
+      question:
+        "Lequel d'entre vous pourrait rivaliser avec les Russes à un jeu d'alcool ?",
+      text: "",
+      picture:
+        "https://www.challenges.fr/assets/img/2014/08/26/images_list-r4x3w1000-579634546780f-russie-vodka-chapka-bar.jpg",
+      button: "Suivant",
+    },
 
-		{
-			question:
-				"Qui est prêt à tout partager (femme compris) avec les autres ?",
-			text: "",
-			picture:
-				"https://imrussia.org/images/stories/Society/Imperial_National_Communism/marksism-leninism.jpg",
-			button: "Suivant",
-		},
-		{
-			question:
-				"Qui serait prêt à manger du kholodets ? (plat de viande en gelée) ? ",
-			text: "",
-			picture:
-				"http://russia-travel-guide.com/cuisine/images/russia-cuisine-kholodets-1.jpg",
-			button: "Suivant",
-		},
-		{
-			question:
-				"Qui chante assez bien pour rejoindre le choeur de l'armée rouge ?",
-			text: "",
-			picture:
-				"https://lh4.googleusercontent.com/EvihBhwVFkxnMI9s5PxYN27n9GYwqVKsW3ejPljNrSHnrLCf8smh6MApibG6shb9UCdlCLTAx4ogvCwkPPUy6M1LG-2Auuli_obKT-AnCuk2Tsxkwh1UkuQdaL7tPg=w720",
-			button: "Suivant",
-		},
+    {
+      question:
+        "Qui est prêt à tout partager (femme compris) avec les autres ?",
+      text: "",
+      picture:
+        "https://imrussia.org/images/stories/Society/Imperial_National_Communism/marksism-leninism.jpg",
+      button: "Suivant",
+    },
+    {
+      question:
+        "Qui serait prêt à manger du kholodets ? (plat de viande en gelée) ? ",
+      text: "",
+      picture:
+        "http://russia-travel-guide.com/cuisine/images/russia-cuisine-kholodets-1.jpg",
+      button: "Suivant",
+    },
+    {
+      question:
+        "Qui chante assez bien pour rejoindre le choeur de l'armée rouge ?",
+      text: "",
+      picture:
+        "https://lh4.googleusercontent.com/EvihBhwVFkxnMI9s5PxYN27n9GYwqVKsW3ejPljNrSHnrLCf8smh6MApibG6shb9UCdlCLTAx4ogvCwkPPUy6M1LG-2Auuli_obKT-AnCuk2Tsxkwh1UkuQdaL7tPg=w720",
+      button: "Suivant",
+    },
 
     {
       question: "Qui pourrait défier un Russe aux échecs?",
@@ -120,32 +119,32 @@ const MagazineTest = ({ setModalMagazine }) => {
           />
           <label for="playerOne">Big Jon</label>
 
-					<input
-						type="radio"
-						id="playerTwo"
-						name={`step-${step}`}
-						value="Lil Jon"
-						onChange={handleChange}
-					/>
-					<label for="playerTwo">Lil Jon</label>
+          <input
+            type="radio"
+            id="playerTwo"
+            name={`step-${step}`}
+            value="Lil Jon"
+            onChange={handleChange}
+          />
+          <label for="playerTwo">Lil Jon</label>
 
-					<input
-						type="radio"
-						id="playerThree"
-						name={`step-${step}`}
-						value="FloFlo"
-						onChange={handleChange}
-					/>
-					<label for="playerThree">FloFlo</label>
+          <input
+            type="radio"
+            id="playerThree"
+            name={`step-${step}`}
+            value="FloFlo"
+            onChange={handleChange}
+          />
+          <label for="playerThree">FloFlo</label>
 
-					<input
-						type="radio"
-						id="playerFour"
-						name={`step-${step}`}
-						value="Fanny"
-						onChange={handleChange}
-					/>
-					<label for="playerFour">Fanny</label>
+          <input
+            type="radio"
+            id="playerFour"
+            name={`step-${step}`}
+            value="Fanny"
+            onChange={handleChange}
+          />
+          <label for="playerFour">Fanny</label>
           <input
             type="radio"
             id="playerFive"
@@ -158,13 +157,13 @@ const MagazineTest = ({ setModalMagazine }) => {
         <button
           className="close-btn"
           onSubmit={() => handleSubmit}
-          onClick={() => handleClick()}>
+          onClick={() => handleClick()}
+        >
           {testStep.button}
         </button>
       </div>
     </div>
   );
-
 };
 
 export default MagazineTest;
