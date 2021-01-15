@@ -10,7 +10,8 @@ export const Join = () => {
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
-        <h1 className="heading">Join</h1>
+        <h1 className="heading">See U Further</h1>
+        <div id="earth" />
         <div>
           <input
             placeholder="Name"
@@ -29,8 +30,7 @@ export const Join = () => {
         </div>
         <Link
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-          to={`/room/chat?name=${name}&room=${room}`}
-        >
+          to={`/room/chat?name=${name}&room=${room}`}>
           <button className={"button mt-20"} type="submit">
             Sign In
           </button>

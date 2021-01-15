@@ -56,20 +56,19 @@ const SubTitles = ({ handleTVOff }) => {
         muted={mute}
         src={urlVideo}
         onEnded={handleTimer}
-        onPlay={handleMute}
-      >
+        onPlay={handleMute}>
         <ControlBar autoHide={false} disableDefaultControls={true}>
           <PlayToggle />
         </ControlBar>
       </Player>
-      <label className="subtitle-label" for="subtitle">
+      <label className="subtitle-label" htmlFor="subtitle">
         Imaginez les sous-titres!
       </label>
       <input
         className="subtitle-input"
         type="text"
         id="subtitle"
-        placeholder="Votre sous-titre!"
+        placeholder="Votre sous-titre"
         value={subtitle}
         onChange={handleChange}
       />

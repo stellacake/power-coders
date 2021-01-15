@@ -10,7 +10,7 @@ export const moscowFacts = {
   musicbox:
     "Anna Pavlova est considérée pour beaucoup comme la meilleure danseuse de ballet classique. C'est elle qui a donné son nom à la célèbre pâtisserie. Elle a été une étoile du Ballet impérial russe, des Ballets russes de Serge Diaghilev et la première ballerine à parcourir le monde avec sa propre compagnie.",
   phone:
-    "Non, ce ne sont pas les Etats-Unis au bout du fil ! Mais pourquoi ne pas appeler vos proches pour prendre de leurs nouvelles ? ;) ",
+    "Non, ce ne sont pas les Etats-Unis au bout du fil! Mais pourquoi ne pas appeler vos proches pour prendre de leurs nouvelles ? ;) ",
   chapka:
     "Il fait bien trop beau dehors pour sortir la chapka ! D'ailleurs, ce mot signifie bonnet. Son vrai nom c'est ouchanka. Sa particularité est d'avoir deux parties rabattables qui peuvent couvrir les oreilles et la nuque, ou bien être relevées et nouées sur la coiffe.",
   tea:

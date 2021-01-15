@@ -434,7 +434,12 @@ const Moscow = ({ location }) => {
       <div className="moscow-tv">
         <div className="moscow-tv-area" onClick={() => handleTVOn()}></div>
         <div className={`fact-${modalTV}`}>
+          <div className="modal-container-game">
           <SubTitles handleTVOff={() => handleTVOff()} />
+            <div className="close-btn" onClick={() => handleTVOff()}>
+              Fermer
+            </div>
+          </div>
         </div>
       </div>
 
