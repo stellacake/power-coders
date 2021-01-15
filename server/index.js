@@ -63,46 +63,6 @@ io.on("connect", (socket) => {
     }
   });
 
-  socket.on("showBook", () => {
-    io.emit("showBook");
-  });
-
-  socket.on("hideBook", () => {
-    io.emit("hideBook");
-  });
-
-  socket.on("showWindow", () => {
-    io.emit("showWindow");
-  });
-
-  socket.on("hideWindow", () => {
-    io.emit("hideWindow");
-  });
-
-  socket.on("showPainting", () => {
-    io.emit("showPainting");
-  });
-
-  socket.on("hidePainting", () => {
-    io.emit("hidePainting");
-  });
-
-  socket.on("showMir", () => {
-    io.emit("showMir");
-  });
-
-  socket.on("hideMir", () => {
-    io.emit("hideMir");
-  });
-
-  socket.on("showMusicbox", () => {
-    io.emit("showMusicbox");
-  });
-
-  socket.on("hideMusicbox", () => {
-    io.emit("hideMusicbox");
-  });
-
   socket.on("showMagazine", () => {
     io.emit("showMagazine");
   });
@@ -111,36 +71,12 @@ io.on("connect", (socket) => {
     io.emit("hideMagazine");
   });
 
-  socket.on("showPhone", () => {
-    io.emit("showPhone");
-  });
-
-  socket.on("hidePhone", () => {
-    io.emit("hidePhone");
-  });
-
-  socket.on("showChapka", () => {
-    io.emit("showChapka");
-  });
-
-  socket.on("hideChapka", () => {
-    io.emit("hideChapka");
-  });
-
   socket.on("showTV", () => {
     io.emit("showTV");
   });
 
   socket.on("hideTV", () => {
     io.emit("hideTV");
-  });
-
-  socket.on("showDolls", () => {
-    io.emit("showDolls");
-  });
-
-  socket.on("hideDolls", () => {
-    io.emit("hideDolls");
   });
 
   socket.on("showNewspaper", () => {
@@ -157,30 +93,6 @@ io.on("connect", (socket) => {
 
   socket.on("hideCocktail", () => {
     io.emit("hideCocktail");
-  });
-
-  socket.on("showTea", () => {
-    io.emit("showTea");
-  });
-
-  socket.on("hideTea", () => {
-    io.emit("hideTea");
-  });
-
-  socket.on("showBin", () => {
-    io.emit("showBin");
-  });
-
-  socket.on("hideBin", () => {
-    io.emit("hideBin");
-  });
-
-  socket.on("showBottle", () => {
-    io.emit("showBottle");
-  });
-
-  socket.on("hideBottle", () => {
-    io.emit("hideBottle");
   });
 
   socket.on("setDefinitiveAnswer", () => {

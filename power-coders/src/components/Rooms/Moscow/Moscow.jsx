@@ -54,42 +54,6 @@ const Moscow = ({ location }) => {
     socket.current = io(ENDPOINT);
   }, [ENDPOINT, location.search]);
 
-  //--------------------------------------------BOOK------------------------------------------
-  const handleBookOn = () => {
-    socket.current.emit("showBook");
-  };
-
-  const handleBookOff = () => {
-    socket.current.emit("hideBook");
-  };
-  //--------------------------------------------WINDOW------------------------------------------
-  const handleWindowOn = () => {
-    socket.current.emit("showWindow");
-  };
-  const handleWindowOff = () => {
-    socket.current.emit("hideWindow");
-  };
-  //--------------------------------------------PAINTING------------------------------------------
-  const handlePaintingOn = () => {
-    socket.current.emit("showPainting");
-  };
-  const handlePaintingOff = () => {
-    socket.current.emit("hidePainting");
-  };
-  //--------------------------------------------MIR------------------------------------------
-  const handleMirOn = () => {
-    socket.current.emit("showMir");
-  };
-  const handleMirOff = () => {
-    socket.current.emit("hideMir");
-  };
-  //--------------------------------------------MUSICBOX------------------------------------------
-  const handleMusicboxOn = () => {
-    socket.current.emit("showMusicbox");
-  };
-  const handleMusicboxOff = () => {
-    socket.current.emit("hideMusicbox");
-  };
   //--------------------------------------------MAGAZINE------------------------------------------
   const handleMagazineOn = () => {
     socket.current.emit("showMagazine");
@@ -97,20 +61,7 @@ const Moscow = ({ location }) => {
   const handleMagazineOff = () => {
     socket.current.emit("hideMagazine");
   };
-  //--------------------------------------------PHONE------------------------------------------
-  const handlePhoneOn = () => {
-    socket.current.emit("showPhone");
-  };
-  const handlePhoneOff = () => {
-    socket.current.emit("hidePhone");
-  };
-  //--------------------------------------------CHAPKA------------------------------------------
-  const handleChapkaOn = () => {
-    socket.current.emit("showChapka");
-  };
-  const handleChapkaOff = () => {
-    socket.current.emit("hideChapka");
-  };
+
   //--------------------------------------------TV------------------------------------------
   const handleTVOn = () => {
     socket.current.emit("showTV");
@@ -118,13 +69,7 @@ const Moscow = ({ location }) => {
   const handleTVOff = () => {
     socket.current.emit("hideTV");
   };
-  //--------------------------------------------DOLLS------------------------------------------
-  const handleDollsOn = () => {
-    socket.current.emit("showDolls");
-  };
-  const handleDollsOff = () => {
-    socket.current.emit("hideDolls");
-  };
+
   //--------------------------------------------NEWSPAPER------------------------------------------
   const handleNewspaperOn = () => {
     socket.current.emit("showNewspaper");
@@ -139,69 +84,8 @@ const Moscow = ({ location }) => {
   const handleCocktailOff = () => {
     socket.current.emit("hideCocktail");
   };
-  //--------------------------------------------TEA------------------------------------------
-  const handleTeaOn = () => {
-    socket.current.emit("showTea");
-  };
-  const handleTeaOff = () => {
-    socket.current.emit("hideTea");
-  };
-  //--------------------------------------------BIN------------------------------------------
-  const handleBinOn = () => {
-    socket.current.emit("showBin");
-  };
-  const handleBinOff = () => {
-    socket.current.emit("hideBin");
-  };
-  //--------------------------------------------BOTTLE------------------------------------------
-  const handleBottleOn = () => {
-    socket.current.emit("showBottle");
-  };
-  const handleBottleOff = () => {
-    socket.current.emit("hideBottle");
-  };
 
   useEffect(() => {
-    //-------------------BOOK---------------------
-    socket.current.on("showBook", () => {
-      setModalBook("on");
-    });
-
-    socket.current.on("hideBook", () => {
-      setModalBook("off");
-    });
-    //-------------------WINDOW--------------------
-    socket.current.on("showWindow", () => {
-      setModalWindow("on");
-    });
-
-    socket.current.on("hideWindow", () => {
-      setModalWindow("off");
-    });
-    //-------------------PAINTING--------------------
-    socket.current.on("showPainting", () => {
-      setModalPainting("on");
-    });
-
-    socket.current.on("hidePainting", () => {
-      setModalPainting("off");
-    });
-    //-------------------MIR--------------------
-    socket.current.on("showMir", () => {
-      setModalMir("on");
-    });
-
-    socket.current.on("hideMir", () => {
-      setModalMir("off");
-    });
-    //-------------------MUSICBOX--------------------
-    socket.current.on("showMusicbox", () => {
-      setModalMusicbox("on");
-    });
-
-    socket.current.on("hideMusicbox", () => {
-      setModalMusicbox("off");
-    });
     //-------------------Magazine--------------------
     socket.current.on("showMagazine", () => {
       setModalMagazine("on");
@@ -210,22 +94,7 @@ const Moscow = ({ location }) => {
     socket.current.on("hideMagazine", () => {
       setModalMagazine("off");
     });
-    //-------------------Phone--------------------
-    socket.current.on("showPhone", () => {
-      setModalPhone("on");
-    });
 
-    socket.current.on("hidePhone", () => {
-      setModalPhone("off");
-    });
-    //-------------------Chapka--------------------
-    socket.current.on("showChapka", () => {
-      setModalChapka("on");
-    });
-
-    socket.current.on("hideChapka", () => {
-      setModalChapka("off");
-    });
     //-------------------TV--------------------
     socket.current.on("showTV", () => {
       setModalTV("on");
@@ -234,14 +103,7 @@ const Moscow = ({ location }) => {
     socket.current.on("hideTV", () => {
       setModalTV("off");
     });
-    //-------------------DOLLS--------------------
-    socket.current.on("showDolls", () => {
-      setModalDolls("on");
-    });
 
-    socket.current.on("hideDolls", () => {
-      setModalDolls("off");
-    });
     //-------------------NEWSPAPER--------------------
     socket.current.on("showNewspaper", () => {
       setModalNewspaper("on");
@@ -258,46 +120,22 @@ const Moscow = ({ location }) => {
     socket.current.on("hideCocktail", () => {
       setModalCocktail("off");
     });
-    //-------------------TEA--------------------
-    socket.current.on("showTea", () => {
-      setModalTea("on");
-    });
-
-    socket.current.on("hideTea", () => {
-      setModalTea("off");
-    });
-    //-------------------BIN--------------------
-    socket.current.on("showBin", () => {
-      setModalBin("on");
-    });
-
-    socket.current.on("hideBin", () => {
-      setModalBin("off");
-    });
-    //-------------------BOTTLE--------------------
-    socket.current.on("showBottle", () => {
-      setModalBottle("on");
-    });
-
-    socket.current.on("hideBottle", () => {
-      setModalBottle("off");
-    });
-  }, []);
-
-  console.log(modalBook);
+  });
 
   return (
     <div className="moscow-room">
       <img className="hotel-room" src={moscowRoom} alt="chambre d'hôtel" />
       <div className="moscow-book">
-        <div className="moscow-book-area" onClick={() => handleBookOn()}></div>
+        <div
+          className="moscow-book-area"
+          onClick={() => setModalBook("on")}></div>
         <div className={`fact-${modalBook}`}>
           <div className="modal-container">
             <img className="modal-item" src={book} alt="livre Guerre et Paix" />
             <div className="modal-infos">
               <div className="header">Le saviez-vous&nbsp;?</div>
               <div className="modal-text">{moscowFacts.book}</div>
-              <div className="close-btn" onClick={() => handleBookOff()}>
+              <div className="close-btn" onClick={() => setModalBook("off")}>
                 Fermer
               </div>
             </div>
@@ -307,8 +145,7 @@ const Moscow = ({ location }) => {
       <div className="moscow-window">
         <div
           className="moscow-window-area"
-          onClick={() => handleWindowOn()}
-        ></div>
+          onClick={() => setModalWindow("on")}></div>
         <div className={`fact-${modalWindow}`}>
           <div className="modal-container">
             <img
@@ -319,7 +156,7 @@ const Moscow = ({ location }) => {
             <div className="modal-infos">
               <div className="header">Le saviez-vous&nbsp;?</div>
               <div className="modal-text">{moscowFacts.window}</div>
-              <div className="close-btn" onClick={() => handleWindowOff()}>
+              <div className="close-btn" onClick={() => setModalWindow("off")}>
                 Fermer
               </div>
             </div>
@@ -329,8 +166,7 @@ const Moscow = ({ location }) => {
       <div className="moscow-painting">
         <div
           className="moscow-painting-area"
-          onClick={() => handlePaintingOn()}
-        ></div>
+          onClick={() => setModalPainting("on")}></div>
         <div className={`fact-${modalPainting}`}>
           <div className="modal-container">
             <img
@@ -341,7 +177,9 @@ const Moscow = ({ location }) => {
             <div className="modal-infos">
               <div className="header">Le saviez-vous&nbsp;?</div>
               <div className="modal-text">{moscowFacts.painting}</div>
-              <div className="close-btn" onClick={() => handlePaintingOff()}>
+              <div
+                className="close-btn"
+                onClick={() => setModalPainting("off")}>
                 Fermer
               </div>
             </div>
@@ -353,7 +191,7 @@ const Moscow = ({ location }) => {
           src={mir}
           alt="station MIR"
           className="moscow-mir-area"
-          onClick={() => handleMirOn()}
+          onClick={() => setModalMir("on")}
         />
         <div className={`fact-${modalMir}`}>
           <div className="modal-container">
@@ -361,7 +199,7 @@ const Moscow = ({ location }) => {
             <div className="modal-infos">
               <div className="header">Le saviez-vous&nbsp;?</div>
               <div className="modal-text">{moscowFacts.mir}</div>
-              <div className="close-btn" onClick={() => handleMirOff()}>
+              <div className="close-btn" onClick={() => setModalMir("off")}>
                 Fermer
               </div>
             </div>
@@ -371,15 +209,16 @@ const Moscow = ({ location }) => {
       <div className="moscow-musicbox">
         <div
           className="moscow-musicbox-area"
-          onClick={() => handleMusicboxOn()}
-        ></div>
+          onClick={() => setModalMusicbox("on")}></div>
         <div className={`fact-${modalMusicbox}`}>
           <div className="modal-container">
             <img className="modal-item" src={musicbox} alt="boîte à musique" />
             <div className="modal-infos">
               <div className="header">Le saviez-vous&nbsp;?</div>
               <div className="modal-text">{moscowFacts.musicbox}</div>
-              <div className="close-btn" onClick={() => handleMusicboxOff()}>
+              <div
+                className="close-btn"
+                onClick={() => setModalMusicbox("off")}>
                 Fermer
               </div>
             </div>
@@ -389,8 +228,7 @@ const Moscow = ({ location }) => {
       <div className="moscow-magazine">
         <div
           className="moscow-magazine-area"
-          onClick={() => handleMagazineOn()}
-        ></div>
+          onClick={() => handleMagazineOn()}></div>
         <div className={`fact-${modalMagazine}`}>
           <MagazineTest handleMagazineOff={() => handleMagazineOff()} />
         </div>
@@ -398,15 +236,14 @@ const Moscow = ({ location }) => {
       <div className="moscow-phone">
         <div
           className="moscow-phone-area"
-          onClick={() => handlePhoneOn()}
-        ></div>
+          onClick={() => setModalPhone("on")}></div>
         <div className={`fact-${modalPhone}`}>
           <div className="modal-container">
             <img className="modal-item" src={phone} alt="téléphone" />
             <div className="modal-infos">
               <div className="header">Family time&nbsp;!</div>
               <div className="modal-text">{moscowFacts.phone}</div>
-              <div className="close-btn" onClick={() => handlePhoneOff()}>
+              <div className="close-btn" onClick={() => setModalPhone("off")}>
                 Fermer
               </div>
             </div>
@@ -416,15 +253,14 @@ const Moscow = ({ location }) => {
       <div className="moscow-chapka">
         <div
           className="moscow-chapka-area"
-          onClick={() => handleChapkaOn()}
-        ></div>
+          onClick={() => setModalChapka("on")}></div>
         <div className={`fact-${modalChapka}`}>
           <div className="modal-container">
             <img className="modal-item" src={chapka} alt="chapka" />
             <div className="modal-infos">
               <div className="header">Mais non&nbsp;!</div>
               <div className="modal-text">{moscowFacts.chapka}</div>
-              <div className="close-btn" onClick={() => handleChapkaOff()}>
+              <div className="close-btn" onClick={() => setModalChapka("off")}>
                 Fermer
               </div>
             </div>
@@ -450,21 +286,19 @@ const Moscow = ({ location }) => {
       <div className="moscow-dolls">
         <div
           className="moscow-dolls-area"
-          onClick={() => handleDollsOn()}
-        ></div>
+          onClick={() => setModalDolls("on")}></div>
         <div className={`fact-${modalDolls}`}>
-          <RussianDolls handleDollsOff={() => handleDollsOff()} />
+          <RussianDolls handleDollsOff={() => setModalDolls("off")} />
         </div>
       </div>
       <div className="moscow-newspaper">
         <div
           className="moscow-newspaper-area"
-          onClick={() => handleNewspaperOn()}
-        ></div>
+          onClick={() => setModalNewspaper("on")}></div>
         <div className={`fact-${modalNewspaper}`}>
           <div className="modal-container-game">
             <Newspaper />
-            <div className="close-btn" onClick={() => handleNewspaperOff()}>
+            <div className="close-btn" onClick={() => setModalNewspaper("off")}>
               Fermer
             </div>
           </div>
@@ -473,8 +307,7 @@ const Moscow = ({ location }) => {
       <div className="moscow-cocktail">
         <div
           className="moscow-cocktail-area"
-          onClick={() => handleCocktailOn()}
-        ></div>
+          onClick={() => handleCocktailOn()}></div>
         <div className={`fact-${modalCocktail}`}>
           <div className="modal-container-game">
             <WhiteRussian />
@@ -487,14 +320,16 @@ const Moscow = ({ location }) => {
       <div className="radioContainer">
         <Radio />
         <div className="moscow-tea">
-          <div className="moscow-tea-area" onClick={() => handleTeaOn()}></div>
+          <div
+            className="moscow-tea-area"
+            onClick={() => setModalTea("on")}></div>
           <div className={`fact-${modalTea}`}>
             <div className="modal-container">
               <img className="modal-item" src={tea} alt="Thé russe" />
               <div className="modal-infos">
                 <div className="header">Le saviez-vous&nbsp;?</div>
                 <div className="modal-text">{moscowFacts.tea}</div>
-                <div className="close-btn" onClick={() => handleTeaOff()}>
+                <div className="close-btn" onClick={() => setModalTea("off")}>
                   Fermer
                 </div>
               </div>
@@ -502,14 +337,16 @@ const Moscow = ({ location }) => {
           </div>
         </div>
         <div className="moscow-bin">
-          <div className="moscow-bin-area" onClick={() => handleBinOn()}></div>
+          <div
+            className="moscow-bin-area"
+            onClick={() => setModalBin("on")}></div>
           <div className={`fact-${modalBin}`}>
             <div className="modal-container">
               <img className="modal-item" src={metro} alt="Pass de métro" />
               <div className="modal-infos">
                 <div className="header">Déjà&nbsp;!?</div>
                 <div className="modal-text">{moscowFacts.bin}</div>
-                <div className="close-btn" onClick={() => handleBinOff()}>
+                <div className="close-btn" onClick={() => setModalBin("off")}>
                   Fermer
                 </div>
               </div>
@@ -519,8 +356,7 @@ const Moscow = ({ location }) => {
         <div className="moscow-bottle">
           <div
             className="moscow-bottle-area"
-            onClick={() => handleBottleOn()}
-          ></div>
+            onClick={() => setModalBottle("on")}></div>
           <div className={`fact-${modalBottle}`}>
             <div className="modal-container">
               <img
@@ -531,7 +367,9 @@ const Moscow = ({ location }) => {
               <div className="modal-infos">
                 <div className="header">Hé ho&nbsp;!</div>
                 <div className="modal-text">{moscowFacts.bottle}</div>
-                <div className="close-btn" onClick={() => handleBottleOff()}>
+                <div
+                  className="close-btn"
+                  onClick={() => setModalBottle("off")}>
                   Fermer
                 </div>
               </div>
