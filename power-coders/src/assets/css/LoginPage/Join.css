@@ -19,7 +19,11 @@ body {
   text-align: center;
   height: 100vh;
   align-items: center;
-  background-color: #1a1a1d;
+  background: linear-gradient(
+    to bottom right,
+    rgb(29, 120, 247),
+    rgb(123, 216, 76)
+  );
 }
 
 .joinInnerContainer {
@@ -33,15 +37,10 @@ body {
 }
 
 .heading {
-  background: linear-gradient(
-    to bottom right,
-    rgb(29, 120, 247),
-    rgb(123, 216, 76)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
+
   font-size: 3em;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Marck Script", cursive;
   padding-bottom: 10px;
   border-bottom: 2px solid white;
 }
