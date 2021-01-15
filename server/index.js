@@ -182,6 +182,10 @@ io.on("connect", (socket) => {
   socket.on("hideBottle", () => {
     io.emit("hideBottle");
   });
+
+  socket.on("setDefinitiveAnswer", () => {
+    io.emit("setDefinitiveAnswer");
+  });
 });
 
 server.listen(process.env.PORT || 5000, () =>
