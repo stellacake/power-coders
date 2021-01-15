@@ -4,7 +4,7 @@ import { newspaperArray } from "./newspaperConstants";
 
 import "../../../../../assets/css/Rooms/newspaper.css";
 
-const ENDPOINT = "http://localhost:5000/";
+const ENDPOINT = "https://secure-temple-20124.herokuapp.com/";
 
 //--------------------------------------------SOCKET------------------------------------------
 

@@ -48,7 +48,7 @@ const Moscow = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
-  const ENDPOINT = "http://localhost:5000/";
+  const ENDPOINT = "https://secure-temple-20124.herokuapp.com/";
   let socket = useRef(null);
   useEffect(() => {
     socket.current = io(ENDPOINT);
