@@ -98,6 +98,46 @@ io.on("connect", (socket) => {
   socket.on("setDefinitiveAnswer", () => {
     io.emit("setDefinitiveAnswer");
   });
+
+  socket.on("clickBistro", () => {
+    io.emit("clickBistro");
+  });
+
+  socket.on("clickBlini", () => {
+    io.emit("clickBlini");
+  });
+
+  socket.on("clickHourra", () => {
+    io.emit("clickHourra");
+  });
+
+  socket.on("clickHouligan", () => {
+    io.emit("clickHouligan");
+  });
+
+  socket.on("clickSteppe", () => {
+    io.emit("clickSteppe");
+  });
+
+  socket.on("clickFeria", () => {
+    io.emit("clickFeria");
+  });
+
+  socket.on("clickRobot", () => {
+    io.emit("clickRobot");
+  });
+
+  socket.on("clickSlalom", () => {
+    io.emit("clickSlalom");
+  });
+
+  socket.on("clickKarma", () => {
+    io.emit("clickKarma");
+  });
+
+  socket.on("clickMoleskine", () => {
+    io.emit("clickMoleskine");
+  });
 });
 
 server.listen(process.env.PORT || 5000, () =>

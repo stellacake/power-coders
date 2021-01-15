@@ -294,11 +294,11 @@ const Moscow = ({ location }) => {
       <div className="moscow-newspaper">
         <div
           className="moscow-newspaper-area"
-          onClick={() => setModalNewspaper("on")}></div>
+          onClick={() => handleNewspaperOn()}></div>
         <div className={`fact-${modalNewspaper}`}>
           <div className="modal-container-game">
-            <Newspaper />
-            <div className="close-btn" onClick={() => setModalNewspaper("off")}>
+            <Newspaper location={location} />
+            <div className="close-btn" onClick={() => handleNewspaperOff()}>
               Fermer
             </div>
           </div>
