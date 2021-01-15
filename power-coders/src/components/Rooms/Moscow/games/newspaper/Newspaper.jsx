@@ -4,7 +4,7 @@ import { newspaperArray } from "./newspaperConstants";
 
 import "../../../../../assets/css/Rooms/newspaper.css";
 
-const ENDPOINT = "https://secure-temple-20124.herokuapp.com/";
+const ENDPOINT = process.env.REACT_APP_SERVER;
 
 //--------------------------------------------SOCKET------------------------------------------
 
@@ -101,13 +101,13 @@ function Newspaper({ location }) {
   });
 
   return (
-    <div className="newspaper__wrapper">
-      <h2 className="newspaper__title">Liste de mots</h2>
-      <p className="newspaper__paragraph">
+    <div className='newspaper__wrapper'>
+      <h2 className='newspaper__title'>Liste de mots</h2>
+      <p className='newspaper__paragraph'>
         D'après vous, quels sont les mots russes que vous utilisez sans le
         savoir&nbsp;?
       </p>
-      <div className="newspaper__list">
+      <div className='newspaper__list'>
         {/* {newspaperArrayShuffled.map((item) => {
           return (
             <div

@@ -6,18 +6,18 @@ import { InfoBar } from "./InfoBar";
 import { Input } from "./Input";
 import { Messages } from "./Messages/Messages";
 import { TextContainer } from "./TextContainer";
-
 import "../../assets/css/LoginPage/Chat.css";
 
 let socket = "";
 
+console.log(process.env);
 const Chat = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
   const [users, setUsers] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = "https://secure-temple-20124.herokuapp.com/";
+  const ENDPOINT = process.env.REACT_APP_SERVER;
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -53,8 +53,8 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div className="outerContainer">
-      <div className="container">
+    <div className='outerContainer'>
+      <div className='container'>
         <InfoBar room={room} />
         <TextContainer users={users} />
         <Messages messages={messages} name={name} />
