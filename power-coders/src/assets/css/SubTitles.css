@@ -45,4 +45,19 @@
 .show-answer {
   display: block;
   font-size: calc(0.75vh + 0.75vw);
+  padding: 0;
+}
+
+.reponses {
+  padding: 0;
+  margin: 0;
+}
+
+.close-subtitle {
+  top: -50px;
+  right: -200px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }

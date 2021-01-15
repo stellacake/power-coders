@@ -48,7 +48,7 @@ const Moscow = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
-  const ENDPOINT = "http://localhost:5000/";
+  const ENDPOINT = "https://secure-temple-20124.herokuapp.com/";
   let socket = useRef(null);
   useEffect(() => {
     socket.current = io(ENDPOINT);
@@ -435,14 +435,7 @@ const Moscow = ({ location }) => {
         <div className="moscow-tv-area" onClick={() => handleTVOn()}></div>
         <div className={`fact-${modalTV}`}>
           <div className="modal-container-game">
-            <SubTitles
-              handleTVOff={() => handleTVOff()}
-              modalTV={modalTV}
-              location={location}
-            />
-            <div className="close-btn" onClick={() => handleTVOff()}>
-              Fermer
-            </div>
+            <SubTitles handleTVOff={() => handleTVOff()} modalTV={modalTV} />
           </div>
         </div>
       </div>
