@@ -1,35 +1,88 @@
-import React, { useState /* useEffect */ } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../assets/css/Rooms/Moscow.css";
 import magazine from "../../../assets/img/magazine.png";
 
 const MagazineTest = ({ handleMagazineOff }) => {
+  
+const players = [
+  {
+    id: "playerOne",
+    value: "Big Jon",
+  },
+  {
+    id: "playerTwo",
+    value: "Lil Jon",
+  },
+  {
+    id: "playerThree",
+    value: "FloFlo",
+  },
+  {
+    id: "playerFour",
+    value: "Fannochka",
+  },
+  {
+    id: "playerFive",
+    value: "StellaCake",
+  },
+];
+
   const [step, setStep] = useState(0);
-  const [value, setValue] = useState("");
-  const [score, setScore] = useState({
-    playerOne: 0,
-    playerTwo: 0,
-    playerThree: 0,
-    playerFour: 0,
-    playerFive: 0,
+  const [winner, setWinner] = useState("");
+  const [currentValue, setCurrentValue] = useState("");
+  const [values, setValues] = useState({
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+    6: "",
   });
 
-  const handleChange = async (e) => {
-    setValue(e.target.value);
-    await console.log(value);
-    setScore({ ...score, [e.target.id]: score[e.target.id] + 1 });
+  const handleChange = (e) => {
+    setCurrentValue(e.target.value);
   };
 
   const handleSubmit = (e) => {};
 
   const handleClick = () => {
-    if (step < 7) {
+    if (step === 0) {
       setStep(step + 1);
+    } else if (step < 7) {
+      setValues({ ...values, [step]: currentValue });
+      setStep(step + 1);
+      setCurrentValue("");
     } else {
       handleMagazineOff();
       setStep(0);
+      setCurrentValue("");
     }
   };
-  // useEffect(() => {}, [value]);
+
+  useEffect(() => {
+    if (step === 7) {
+      const finalScore = Object.values(values).reduce(
+        (acc, value) => {
+          acc[value] = acc[value] + 1;
+
+          return acc;
+        },
+        {
+          playerOne: 0,
+          playerTwo: 0,
+          playerThree: 0,
+          playerFour: 0,
+          playerFive: 0,
+        }
+      );
+
+      const higherScore = Object.values(finalScore).sort((a, b) => b - a)[0];
+
+      setWinner(
+        players.find((player) => finalScore[player.id] === higherScore).value
+      );
+    }
+  }, [step]);
 
   const russianTest = [
     {
@@ -90,8 +143,7 @@ const MagazineTest = ({ handleMagazineOff }) => {
       button: "Voir les résultats",
     },
     {
-      question:
-        "Bravo BigJon, tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! ",
+      question: `Bravo ${winner}, tes camarades t'ont désigné le plus russé d'entre vous! Poutine valide ! `,
       text: "",
       picture: "https://media.giphy.com/media/P0RWkdsRpK7ss/giphy.gif",
       button: "Fermer",
@@ -110,51 +162,23 @@ const MagazineTest = ({ handleMagazineOff }) => {
         <div className="header">{testStep.question}</div>
         <div className="modal-text">{testStep.text}</div>
         <form className={step === 0 || step === 7 ? "form-off" : "form-on"}>
-          <input
-            type="radio"
-            id="playerOne"
-            name={`step-${step}`}
-            value="Big Jon"
-            onChange={handleChange}
-          />
-          <label for="playerOne">Big Jon</label>
 
-          <input
-            type="radio"
-            id="playerTwo"
-            name={`step-${step}`}
-            value="Lil Jon"
-            onChange={handleChange}
-          />
-          <label for="playerTwo">Lil Jon</label>
-
-          <input
-            type="radio"
-            id="playerThree"
-            name={`step-${step}`}
-            value="FloFlo"
-            onChange={handleChange}
-          />
-          <label for="playerThree">FloFlo</label>
-
-          <input
-            type="radio"
-            id="playerFour"
-            name={`step-${step}`}
-            value="Fanny"
-            onChange={handleChange}
-          />
-          <label for="playerFour">Fanny</label>
-          <input
-            type="radio"
-            id="playerFive"
-            name={`step-${step}`}
-            value="StellaCake"
-            onChange={handleChange}
-          />
-          <label for="playerFive">Stellacake</label>
+          {players.map((player) => (
+            <>
+              <input
+                type="radio"
+                id={player.id}
+                name={`step-${step}`}
+                value={player.id}
+                checked={currentValue === player.id}
+                onChange={handleChange}
+              />
+              <label htmlFor={player.id}>{player.value}</label>
+            </>
+          ))}
         </form>
         <button
+          disabled={step !== 0 && step !== 7 && currentValue.length === 0}
           className="close-btn"
           onSubmit={() => handleSubmit}
           onClick={() => handleClick()}

@@ -33,8 +33,15 @@ body {
 }
 
 .heading {
-  color: white;
-  font-size: 2.5em;
+  background: linear-gradient(
+    to bottom right,
+    rgb(29, 120, 247),
+    rgb(123, 216, 76)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3em;
+  font-family: "Permanent Marker", cursive;
   padding-bottom: 10px;
   border-bottom: 2px solid white;
 }
@@ -67,4 +74,23 @@ body {
 
 button:focus {
   outline: 0;
+}
+
+#earth {
+  width: 150px;
+  height: 150px;
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  background: url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s1600/1.jpg);
+  border-radius: 100%;
+  background-size: 380px;
+  animation: spin 15s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 380px;
+  }
 }
