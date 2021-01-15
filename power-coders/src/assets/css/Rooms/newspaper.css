@@ -34,7 +34,8 @@
   align-items: center;
   max-width: 250px;
 }
-.newspaper__word {
+
+.word- {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,9 +46,34 @@
   margin: 10px;
   cursor: pointer;
 }
-.newspaper__word--good {
+.word-bistro,
+.word-blini,
+.word-hourra,
+.word-houligan,
+.word-steppe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
   background-color: rgb(118, 210, 118);
 }
-.newspaper__word--wrong {
-  background-color: rgb(216, 113, 113);
+
+.word-feria,
+.word-robot,
+.word-slalom,
+.word-karma,
+.word-moleskine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: rgb(216, 113, 118);
 }

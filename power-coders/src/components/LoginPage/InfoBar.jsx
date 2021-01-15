@@ -11,10 +11,9 @@ export const InfoBar = ({ room }) => (
 			<img className="onlineIcon" src={onlineIcon} alt="online icon" />
 			<h3>{room}</h3>
 		</div>
-		<div className="rightInnerContainer">
-			<a href="/">
-				<img src={closeIcon} alt="close icon" />
-			</a>
-		</div>
+		<div className="rightInnerContainer"> </div>
+		<a href="/">
+			<img className="closeIcon" src={closeIcon} alt="close icon" />
+		</a>
 	</div>
 );
