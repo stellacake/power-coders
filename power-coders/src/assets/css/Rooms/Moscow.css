@@ -1,47 +1,47 @@
 .moscow-room {
-	width: 75%;
-	height: 100vh;
-	position: relative;
+  width: 75%;
+  height: 100vh;
+  position: relative;
 }
 .hotel-room {
-	width: 100%;
-	height: 100%;
-	object-fit: fit;
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
 }
 
 .moscow-book {
-	position: absolute;
-	top: 70%;
-	left: 35%;
-	width: 3.5%;
-	height: 5.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  width: 3.5%;
+  height: 5.5%;
+  cursor: pointer;
 }
 .moscow-window {
-	position: absolute;
-	top: 34%;
-	left: 77%;
-	width: 23%;
-	height: 22%;
-	cursor: pointer;
+  position: absolute;
+  top: 34%;
+  left: 77%;
+  width: 23%;
+  height: 22%;
+  cursor: pointer;
 }
 .moscow-painting {
-	position: absolute;
-	top: 36%;
-	left: 14%;
-	width: 18%;
-	height: 18%;
-	cursor: pointer;
+  position: absolute;
+  top: 36%;
+  left: 14%;
+  width: 18%;
+  height: 18%;
+  cursor: pointer;
 }
 .moscow-mir {
-	position: absolute;
-	top: 7%;
-	left: 0%;
-	width: 19%;
-	height: 15%;
-	cursor: pointer;
-	animation: mir-orbite 60s infinite linear;
-	-webkit-animation: mir-orbite 60s infinite linear;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  width: 19%;
+  height: 15%;
+  cursor: pointer;
+  animation: mir-orbite 30s infinite linear;
+  -webkit-animation: mir-orbite 30s infinite linear;
 }
 .radioContainer {
   display: flex;
@@ -49,127 +49,127 @@
   align-items: center;
 }
 @keyframes mir-orbite {
-	0% {
-		left: -25vh;
-	}
-	50% {
-		left: 85vh;
-	}
-	100% {
-		left: -25vh;
-	}
+  0% {
+    left: -10%;
+  }
+  50% {
+    left: 105%;
+  }
+  100% {
+    left: -10%;
+  }
 }
 @-webkit-keyframes mir-orbite {
-	0% {
-		left: -10%;
-	}
-	50% {
-		left: 110%;
-	}
-	100% {
-		left: -10%;
-	}
+  0% {
+    left: -10%;
+  }
+  50% {
+    left: 105%;
+  }
+  100% {
+    left: -10%;
+  }
 }
 .moscow-musicbox {
-	position: absolute;
-	top: 86%;
-	left: 5%;
-	width: 5%;
-	height: 9%;
-	cursor: pointer;
+  position: absolute;
+  top: 86%;
+  left: 5%;
+  width: 5%;
+  height: 9%;
+  cursor: pointer;
 }
 .moscow-magazine {
-	position: absolute;
-	top: 73%;
-	left: 25%;
-	width: 4%;
-	height: 7%;
-	cursor: pointer;
+  position: absolute;
+  top: 73%;
+  left: 25%;
+  width: 4%;
+  height: 7%;
+  cursor: pointer;
 }
 .moscow-phone {
-	position: absolute;
-	top: 67%;
-	left: 91%;
-	width: 6%;
-	height: 8%;
-	cursor: pointer;
+  position: absolute;
+  top: 67%;
+  left: 91%;
+  width: 6%;
+  height: 8%;
+  cursor: pointer;
 }
 .moscow-chapka {
-	position: absolute;
-	top: 65.5%;
-	left: 49.5%;
-	width: 4%;
-	height: 4.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 65.5%;
+  left: 49.5%;
+  width: 4%;
+  height: 4.5%;
+  cursor: pointer;
 }
 .moscow-tv {
-	position: absolute;
-	top: 42%;
-	left: 54%;
-	width: 11%;
-	height: 13%;
-	cursor: pointer;
+  position: absolute;
+  top: 42%;
+  left: 54%;
+  width: 11%;
+  height: 13%;
+  cursor: pointer;
 }
 .moscow-dolls {
-	position: absolute;
-	top: 59%;
-	left: 63%;
-	width: 6%;
-	height: 8%;
-	cursor: pointer;
+  position: absolute;
+  top: 59%;
+  left: 63%;
+  width: 6%;
+  height: 8%;
+  cursor: pointer;
 }
 .moscow-cocktail {
-	position: absolute;
-	top: 65%;
-	left: 80%;
-	width: 2%;
-	height: 4%;
-	cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  width: 2%;
+  height: 4%;
+  cursor: pointer;
 }
 
 .moscow-newspaper {
-	position: absolute;
-	top: 91%;
-	left: 72.5%;
-	width: 5%;
-	height: 7.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 91%;
+  left: 72.5%;
+  width: 5%;
+  height: 7.5%;
+  cursor: pointer;
 }
 
 .moscow-tea {
-	position: absolute;
-	top: 60%;
-	left: 58.5%;
-	width: 5%;
-	height: 4.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 58.5%;
+  width: 5%;
+  height: 4.5%;
+  cursor: pointer;
 }
 
 .moscow-bin {
-	position: absolute;
-	top: 75%;
-	left: 72.5%;
-	width: 5%;
-	height: 10.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 75%;
+  left: 72.5%;
+  width: 5%;
+  height: 10.5%;
+  cursor: pointer;
 }
 
 .moscow-bottle {
-	position: absolute;
-	top: 54%;
-	left: 38.5%;
-	width: 1.5%;
-	height: 4.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 54%;
+  left: 38.5%;
+  width: 1.5%;
+  height: 4.5%;
+  cursor: pointer;
 }
 
 .moscow-radio {
-	position: absolute;
-	top: 64%;
-	left: 83.5%;
-	width: 5.5%;
-	height: 6.5%;
-	cursor: pointer;
+  position: absolute;
+  top: 64%;
+  left: 83.5%;
+  width: 5.5%;
+  height: 6.5%;
+  cursor: pointer;
 }
 
 .moscow-book-area,
@@ -188,12 +188,12 @@
 .moscow-bin-area,
 .moscow-bottle-area,
 .moscow-radio-area {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .moscow-mir-area {
-	object-fit: contain;
+  object-fit: contain;
 }
 
 .turnradio-on {
@@ -205,94 +205,94 @@
 }
 
 .fact-off {
-	display: none;
+  display: none;
 }
 .fact-on {
-	z-index: 50;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 75vw;
-	height: 100vh;
-	background: linear-gradient(
-		148.74deg,
-		rgb(106, 169, 255, 0.8),
-		rgb(211, 243, 194, 0.8)
-	);
+  z-index: 50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 75vw;
+  height: 100vh;
+  background: linear-gradient(
+    148.74deg,
+    rgb(106, 169, 255, 0.8),
+    rgb(211, 243, 194, 0.8)
+  );
 }
 .modal-container {
-	display: flex;
-	background-color: white;
-	width: 80%;
-	height: 80%;
-	margin-top: 10%;
-	margin-left: 10%;
-	cursor: initial;
+  display: flex;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  cursor: initial;
 }
 
 .modal-container-game {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: white;
-	width: 80%;
-	height: 80%;
-	margin-top: 10%;
-	margin-left: 10%;
-	cursor: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  cursor: initial;
 }
 
 .modal-item {
-	width: 50%;
-	object-fit: contain;
+  width: 50%;
+  object-fit: contain;
 }
 .modal-infos {
-	width: 50%;
-	color: grey;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+  width: 50%;
+  color: grey;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .header {
-	color: var(--primary);
-	font-size: 20px;
-	font-weight: 500;
-	text-align: center;
-	margin: 2rem;
-	padding: auto;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 2rem;
+  padding: auto;
 }
 .modal-text {
-	width: 80%;
-	font-size: 15px;
-	line-height: 20px;
-	text-align: justify;
+  width: 80%;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: justify;
 }
 .close-btn {
-	margin: 2rem;
-	border: 1px solid rgb(122, 207, 238);
-	color: rgb(122, 207, 238);
-	border-radius: 20px;
-	padding: 0.5rem 2rem;
-	width: fit-content;
-	outline: none;
+  margin: 2rem;
+  border: 1px solid rgb(122, 207, 238);
+  color: rgb(122, 207, 238);
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  width: fit-content;
+  outline: none;
 }
 .close-btn:hover,
 .close-btn:focus {
-	color: white;
-	background-color: rgb(122, 207, 238);
-	text-decoration: none;
-	cursor: pointer;
+  color: white;
+  background-color: rgb(122, 207, 238);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .russian-doll {
   height: 75%;
 }
 .form-off {
-	display: none;
+  display: none;
 }
 
 .modal-item-mag {

@@ -1,11 +1,10 @@
 .outerContainer {
-
   height: 100vh;
   position: absolute;
   right: 0;
   top: 0;
   width: 25%;
-
+  z-index: 2;
 }
 
 .textContainer {
@@ -24,7 +23,6 @@
   background: #ffffff;
   border-radius: 8px;
   height: 100%;
-
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
