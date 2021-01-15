@@ -1,10 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import urlVideo from "../../../../assets/video/russian-movie.mp4";
+import queryString from "query-string";
+import io from "socket.io-client";
 import { Player, ControlBar, PlayToggle, playerReducer } from "video-react";
 import "../../../../assets/css/SubTitles.css";
 import "../../../../../node_modules/video-react/dist/video-react.css"; // import css
 
-const SubTitles = ({ handleTVOff }) => {
+const SubTitles = ({ handleTVOff, modalTV, location }) => {
+  const [name, setName] = useState("");
+  const ENDPOINT = "http://localhost:5000/";
+  let socket = useRef(null);
+
+  useEffect(() => {
+    const { name } = queryString.parse(location.search);
+
+    socket.current = io(ENDPOINT);
+
+    setName(name);
+  }, [ENDPOINT, location.search]);
+
+  const vidRef = useRef(null);
   const [answer, setAnswer] = useState({
     subtitle: "",
   });
@@ -36,13 +51,25 @@ const SubTitles = ({ handleTVOff }) => {
     setAnswer({ ...answer, [id]: value });
   };
 
+  if (timeLeft === 0 && modalTV === "on") {
+    vidRef.current.play();
+  }
+
   const handleSubmit = () => {
-    if (timeLeft) {
-      setDefinitiveAnswer(answer.subtitle);
-    } else {
-      handleTVOff();
-    }
+    socket.current.emit("setDefinitiveAnswer");
   };
+  useEffect(() => {
+    socket.current.on("setDefinitiveAnswer", () => {
+      if (timeLeft) {
+        setDefinitiveAnswer([{ ...definitiveAnswer, [name]: answer.subtitle }]);
+      } else {
+        handleTVOff();
+      }
+    });
+  }, []);
+
+  console.log(definitiveAnswer);
+
   const [mute, setMute] = useState(true);
 
   const handleMute = () => {
@@ -52,6 +79,7 @@ const SubTitles = ({ handleTVOff }) => {
   return (
     <div className="subtitle-modal">
       <Player
+        ref={vidRef}
         autoPlay
         muted={mute}
         src={urlVideo}
@@ -77,12 +105,12 @@ const SubTitles = ({ handleTVOff }) => {
         {" "}
         {timeLeft ? "Répondre" : "Fermer"}{" "}
       </button>
-      <div className={timeLeft === 0 ? "show-answer" : "hide-answer"}>
+      {/* <div className={timeLeft === 0 ? "show-answer" : "hide-answer"}>
         {definitiveAnswer}
       </div>
       <div className={timeLeft === 0 ? "hide-answer" : "show-answer"}>
         {definitiveAnswer ? `Merci!` : ""} {timerActive ? `${timeLeft} s` : ""}
-      </div>
+      </div> */}
     </div>
   );
 };
