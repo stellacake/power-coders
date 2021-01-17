@@ -10,7 +10,6 @@ import "../../assets/css/LoginPage/Chat.css";
 
 let socket = "";
 
-console.log(process.env);
 const Chat = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
